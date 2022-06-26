@@ -16,14 +16,9 @@
                       Build lean, beautiful websites with a clean and contemporary
                       <br class="hidden-xs hidden-sm" /> look to suit a range of purposes.
                   </p>
-                  <a class="btn btn--primary type--uppercase" href="{{ asset('template') }}#">
-                      <span class="btn__text">
-                          Launch The Builder
-                      </span>
-                  </a>
-                  <span class="block type--fine-print">or
+                  {{-- <span class="block type--fine-print">or
                       <a href="{{ asset('template') }}/index.html">view the demos</a>
-                  </span>
+                  </span> --}}
               </div>
           </div>
           <!--end of row-->
@@ -31,20 +26,6 @@
       <!--end of container-->
   </section>
 
-  <section class="cta cta-4 space--xxs unpad--bottom">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <hr>
-                <span class="label label--inline">Sale</span>
-                <span>Recieve lifetime free content and bugfix updates when you
-                    <a href="#">purchase Stack</a> today</span>
-            </div>
-        </div>
-        <!--end of row-->
-    </div>
-    <!--end of container-->
-  </section>
   <section class="switchable switchable--switch feature-large">
     <div class="container">
         <div class="row justify-content-around">
@@ -69,6 +50,64 @@
         <!--end of row-->
     </div>
     <!--end of container-->
-</section>
+  </section>
+
+  <section class="text-center imagebg" data-gradient-bg='#06283D,#1363DF,#47B5FF,#1F4690,#7FB5FF,#11468F'>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="cta">
+                    {{-- <h1 style="font-weight: 700; letter-spacing: 3px">VISI DAN MISI</h1> --}}
+                    <h2 class="text-center" style="letter-spacing: 8px; line-height: 0; font-weight:900">VISI</h2>
+                    <p style="font-size: 1.5em; font-weight:500;"><i>“Mewujudkan Desa Janju yang Mandiri , Sejahtera dan Demokratis”</i></p>
+                    <br>
+                    <h2 class="text-center" style="letter-spacing: 8px; line-height: 0; font-weight:900">MISI</h2>
+                    <ul style="color: white;">
+                        <li>
+                            <p style="font-size: 1.5em; font-weight:500;"><i>“Meningkatkan Sumber Daya Manusia agar mempunyai wawasan yang luas.”</i></p>
+                        </li>
+                        <li>
+                            <p style="font-size: 1.5em; font-weight:500;"><i>“Penyelenggaraan Pemerintahan Desa yang bersih dan berwibawa.”</i></p>
+                        </li>
+                        <li>
+                            <p style="font-size: 1.5em; font-weight:500;"><i>“Mengembangkan sikap kegotong royongan masyarakat dalam pembangunan.”</i></p>
+                        </li>
+                        <li>
+                            <p style="font-size: 1.5em; font-weight:500;"><i>“Meningkatkan ekonomi masyarakat dengan membudayakan kemitraan dengan pelaku pembangunan lain.”</i></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+  </section>
+
+  <section class="py-5 mt-5">
+    <div class="container">
+        {{-- <h3 class="text-center">INFORMASI PUBLIK</h3> --}}
+        <div class="row">
+            <div class="col-md-4 col-sm-12 text-center mb-5">
+                <i class="fa-solid fa-file-lines text-primary mb-3" style="font-size: 4em"></i>
+                <h4 class="m-0"><strong>LAYANAN SURAT</strong></h4>
+                <p class="my-3">Layanan surat untuk memenuhi kebutuhan masyarakat</p>
+                <a href="#" class="btn btn-outline-primary">Lihat Halaman <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div class="col-md-4 col-sm-12 text-center mb-5">
+                <i class="fa-solid fa-building text-primary mb-3" style="font-size: 4em"></i>
+                <h4 class="m-0"><strong>STATISTIK DESA</strong></h4>
+                <p class="my-3">Statistik desa untuk dapat melihat statistik desa</p>
+                <a href="#" class="btn btn-outline-primary">Lihat Halaman <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div class="col-md-4 col-sm-12 text-center mb-5">
+                <i class="fa-solid fa-money-bill-trend-up text-primary mb-3" style="font-size: 4em"></i>
+                <h4 class="m-0"><strong>APBDes</strong></h4>
+                <p class="my-3">APBDes berguna untuk melihat sumber pendapatan desa</p>
+                <a href="#" class="btn btn-outline-primary">Lihat Halaman <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+  </section>
 
 @endsection
