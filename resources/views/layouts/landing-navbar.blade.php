@@ -36,7 +36,7 @@
                       <ul class="menu-horizontal text-left">
                           <li class="dropdown">
                               {{-- <span class="dropdown__trigger">Home</span> --}}
-                              <a href="/"><span>Home</span></a>
+                              <a href="/"><span>Beranda</span></a>
                               {{-- <div class="dropdown__container">
                                   <div class="container">
                                       <div class="row">

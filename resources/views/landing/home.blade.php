@@ -9,12 +9,11 @@
           <div class="row">
               <div class="col-md-12">
                   <div class="typed-headline">
-                      <span class="h1 inline-block">I'm Stack &mdash; A killer template for</span>
-                      <span class="h1 inline-block typed-text typed-text--cursor color--primary" data-typed-strings="startups,SaaS,marketing sites, portfolios,blogging,rapid development,business,showcasing products"></span>
+                      <span class="h1 inline-block">Selamat Datang Pada</span>
+                      <span class="h1 inline-block typed-text typed-text--cursor color--primary" data-typed-strings="Website Desa Janju"></span>
                   </div>
                   <p class="lead">
-                      Build lean, beautiful websites with a clean and contemporary
-                      <br class="hidden-xs hidden-sm" /> look to suit a range of purposes.
+                      Kecamatan Tanah Grogot, Kabupaten Paser, Kalimantan Timur
                   </p>
                   {{-- <span class="block type--fine-print">or
                       <a href="{{ asset('template') }}/index.html">view the demos</a>
@@ -40,9 +39,9 @@
             </div>
             <div class="col-md-6 col-lg-5">
                 <div class="switchable__text">
-                    <h2>Perfect components for modern startups</h2>
+                    <h2>Tentang Kantor Desa Janju</h2>
                     <p class="lead">
-                        Launching an attractive and scalable website quickly and affordably is important for modern startups &mdash; Stack offers massive value without looking 'bargain-bin'.
+                        Kantor Desa Janju beralamat di Jalan Negara, RT.003, KM.10, Desa Janju, Kec. Tanah Grogot, Kab. Paser dipimpin oleh Bapak Edi Kariyadi, S.Pd, merupakan salah satu instansi pemerintahan yang berfungsi sebagai tempat berlangsungnya segala kegiatan yang ada di Desa Janju mulai dari kegiatan tata pemerintahan desa hingga pelayanan kepada masyarakat Desa Janju.
                     </p>
                 </div>
             </div>
@@ -91,19 +90,19 @@
             <div class="col-md-4 col-sm-12 text-center mb-5">
                 <i class="fa-solid fa-file-lines text-primary mb-3" style="font-size: 4em"></i>
                 <h4 class="m-0"><strong>LAYANAN SURAT</strong></h4>
-                <p class="my-3">Layanan surat untuk memenuhi kebutuhan masyarakat</p>
+                <p class="my-3">Layanan surat untuk memudahkan masyarakat Desa Janju dalam pembuatan surat</p>
                 <a href="#" class="btn btn-outline-primary">Lihat Halaman <i class="fa-solid fa-angle-right"></i></a>
             </div>
             <div class="col-md-4 col-sm-12 text-center mb-5">
                 <i class="fa-solid fa-building text-primary mb-3" style="font-size: 4em"></i>
                 <h4 class="m-0"><strong>STATISTIK DESA</strong></h4>
-                <p class="my-3">Statistik desa untuk dapat melihat statistik desa</p>
+                <p class="my-3">Statistik Desa untuk menampilkan informasi statistik Desa Janju</p>
                 <a href="#" class="btn btn-outline-primary">Lihat Halaman <i class="fa-solid fa-angle-right"></i></a>
             </div>
             <div class="col-md-4 col-sm-12 text-center mb-5">
                 <i class="fa-solid fa-money-bill-trend-up text-primary mb-3" style="font-size: 4em"></i>
-                <h4 class="m-0"><strong>APBDes</strong></h4>
-                <p class="my-3">APBDes berguna untuk melihat sumber pendapatan desa</p>
+                <h4 class="m-0"><strong>APBDesa</strong></h4>
+                <p class="my-3">APBDesa untuk transparansi sumber dana dan pengeluaran pembangunan Desa Janju</p>
                 <a href="#" class="btn btn-outline-primary">Lihat Halaman <i class="fa-solid fa-angle-right"></i></a>
             </div>
         </div>

@@ -7,9 +7,9 @@
     <div class="container pos-vertical-center">
         <div class="row">
             <div class="col-md-7 col-lg-5">
-                <h2>Login to continue</h2>
+                <h2>DESA JANJU</h2>
                 <p class="lead">
-                    Welcome back, sign in with your existing Stack account credentials
+                    Jalan Negara KM.10, RT.003, Kecamatan Tanah Grogot, Kabupaten Paser, Kodepos 76251 
                 </p>
                 <form action="/login" method="POST">
                     @csrf
