@@ -1,0 +1,7 @@
+Beranda
+- secsion 4 : ditambahin angka jumlah penduduk, jumlah laki-laki, jumlah perempuan. BG biru kek visi misi. Link referensi modelannya https://preview.colorlib.com/#personal.
+- secsion 5 : ditambahin maps, sedangan aja di samping kiri. sebelah kanannya jam operasionalnya. Senin - Kamis : 09.00 - 14.00, Jum'at : 09.00 - 12.00, Sabtu - Minggu : Libur. BG putih kek di secsion 3. Link referensi modelannya https://paserkab.go.id/
+- footer : posisi kiri kontak kami bentukan + referennya http://kaligono.desa.id/, posisi kanan sosmednya bentukan + referensinya https://bcadigital.co.id/
+
+
+Profil
