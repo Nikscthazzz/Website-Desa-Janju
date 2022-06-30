@@ -1,7 +1,38 @@
-Beranda
-- secsion 4 : ditambahin angka jumlah penduduk, jumlah laki-laki, jumlah perempuan. BG biru kek visi misi. Link referensi modelannya https://preview.colorlib.com/#personal.
-- secsion 5 : ditambahin maps, sedangan aja di samping kiri. sebelah kanannya jam operasionalnya. Senin - Kamis : 09.00 - 14.00, Jum'at : 09.00 - 12.00, Sabtu - Minggu : Libur. BG putih kek di secsion 3. Link referensi modelannya https://paserkab.go.id/
-- footer : posisi kiri kontak kami bentukan + referennya http://kaligono.desa.id/, posisi kanan sosmednya bentukan + referensinya https://bcadigital.co.id/
 
+Beranda
+secsion 4 : ditambahin angka jumlah penduduk 2.373 Jiwa, jumlah laki-laki 1.286 Jiwa., jumlah perempuan 1.087 Jiwa (dikasih icon orang). BG biru kek visi misi. Link referensi modelannya https://preview.colorlib.com/#personal.
+secsion 5 : referensi tata letak http://kaligono.desa.id/layanan. BG putih kayak secsion tentang desa janju.
+            - kiri masukkan konten maps.
+            - tengah masukkan konten jam operasionalnya, Senin - Kamis : 09.00 - 14.00, Jum'at : 09.00 - 12.00, Sabtu - Minggu : Libur.
+            - kanan masukkan konten alamat : Jalan Negara KM.10 RT.003 Kecamatan Tanah Grogot Kabupaten Paser, email : Desajanjupaser@gmail.com, No. Telpon : +62 812-5187-9326. BG putih kek di secsion 3.
 
 Profil
+Dibagian navbar nanti kek dibikin turunan pilihan gitu, meliputi :
+- Tentang desa
+- visi & misi
+- struktur pemerintahan
+- demografi desa : Jarak tempuh dari Ibukota Kecamatan dan Ibukota Kabupaten  + 10 Km terletak pada ketinggian 0 – 15 M permukaan laut sedangkan jarak dari Desa Janju ke Ibu Kota Propinsi adalah 263 Km. Desa Janju secara administratif terbagi menjadi 8 Rukun Tetangga ( RT ) dan berbatasan langsung dengan :
+                   Sebelah Utara    : Sungai Muru ( Kuaro )
+                   Sebelah Timur    : Desa Tepian Batang dan Desa Jone
+                   Sebelah Selatan  : Desa Sempulang
+                   Sebelah Barat    : Desa Keluang Lolo
+
+Footer
+isinya tulisan copyright. modelannya kayak https://sakip.paserkab.go.id/#
+
+
+
+========================= Informasi website janju ================================
+
+Url Webs          : https://janju.desa.or.id
+Akses admistrator : https://janju.desa.or.id/index.php/siteman
+User              : admin
+Password          : Desajanju123_
+Panduan website   : https://github.com/OpenSID/OpenSID/wiki/Halaman-Administrasi
+
+============================== Referensi Website ==================================
+
+Referensi utama model, warna, animasi       : https://sakip.paserkab.go.id/
+Template referensi utama                    : https://bootstrapmade.com/demo/Arsha/
+Referensi kabupaten paser                   : https://paserkab.go.id/
+Referensi gambaran isi konten desa kaligono : http://kaligono.desa.id/

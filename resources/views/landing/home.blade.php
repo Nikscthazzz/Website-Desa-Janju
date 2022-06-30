@@ -39,9 +39,9 @@
             </div>
             <div class="col-md-6 col-lg-5">
                 <div class="switchable__text">
-                    <h2>Tentang Kantor Desa Janju</h2>
+                    <h2>Tentang Desa Janju</h2>
                     <p class="lead">
-                        Kantor Desa Janju beralamat di Jalan Negara, RT.003, KM.10, Desa Janju, Kec. Tanah Grogot, Kab. Paser dipimpin oleh Bapak Edi Kariyadi, S.Pd, merupakan salah satu instansi pemerintahan yang berfungsi sebagai tempat berlangsungnya segala kegiatan yang ada di Desa Janju mulai dari kegiatan tata pemerintahan desa hingga pelayanan kepada masyarakat Desa Janju.
+                        Desa Janju merupakan salah satu Desa yang ada di Kecamatan Tanah Grogot Kabupaten Paser Kalimantan Timur yang terbagi menjadi 8 Rukun Tetangga (RT). Jarak tempuh dari Ibukota Kecamatan dan Ibukota Kabupaten  + 10 KM terletak pada ketinggian 0 – 15 Meter permukaan laut sedangkan jarak dari Desa Janju ke Ibu Kota Provinsi adalah 263 KM
                     </p>
                 </div>
             </div>
@@ -108,5 +108,6 @@
         </div>
     </div>
   </section>
+
 
 @endsection
