@@ -17,8 +17,19 @@
         <link href="{{ asset('template') }}/https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
         <link href="{{ asset('template') }}/https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/logo_paser.png') }}">
-
+        
         <link rel="stylesheet" href="{{ asset('template/fontawesome/css/all.min.css') }}">
+        <link href="{{ asset('aos/dist/aos.css') }}" rel="stylesheet" />
+
+        <script>
+            jQuery(document).ready(function($) {
+                $('.counter').counterUp({
+                    delay: 10,
+                    time: 1000
+                });
+            });
+        </script>
+
         @yield('css')
     </head>
     <body class=" ">
@@ -91,6 +102,12 @@
         <script src="{{ asset('template') }}/js/smooth-scroll.min.js"></script>
         <script src="{{ asset('template') }}/js/scripts.js"></script>
         <script src="{{ asset('template/fontawesome/js/all.min.js') }}"></script>
+        <script src="{{ asset('aos/dist/aos.js') }}"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script src="{{ asset('counter/jquery.counterup.min.js') }}"></script>
+        <script>
+            AOS.init();
+        </script>
 
         @yield('script')
     </body>

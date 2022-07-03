@@ -25,7 +25,7 @@
       <!--end of container-->
   </section>
 
-  <section class="switchable switchable--switch feature-large">
+  <section class="switchable switchable--switch feature-large" data-aos="fade-up" data-aos-duration="500">
     <div class="container">
         <div class="row justify-content-around">
             <div class="col-md-6 col-12">
@@ -52,7 +52,7 @@
   </section>
 
   <section class="text-center imagebg" data-gradient-bg='#06283D,#1363DF,#47B5FF,#1F4690,#7FB5FF,#11468F'>
-    <div class="container">
+    <div class="container" data-aos="fade-up" data-aos-duration="500">
         <div class="row">
             <div class="col-md-12 col-lg-12">
                 <div class="cta">
@@ -83,7 +83,7 @@
     <!--end of container-->
   </section>
 
-  <section class="py-5 mt-5">
+  <section class="py-5 mt-5" data-aos="fade-up" data-aos-duration="500">
     <div class="container">
         {{-- <h3 class="text-center">INFORMASI PUBLIK</h3> --}}
         <div class="row">
@@ -109,5 +109,57 @@
     </div>
   </section>
 
+  <section class="text-center imagebg" data-gradient-bg='#06283D,#1363DF,#47B5FF,#1F4690,#7FB5FF,#11468F'>
+    <div class="container" data-aos="fade-up" data-aos-duration="500">
+        <div class="row">
+            <div class="col-md-4 text-center text-light">
+                <i class="fas fa-users" style="font-size: 7em"></i><br>
+                <h1 class="mb-0 mt-3 counter" style="font-weight: 700">100</h1>
+                <p class="m-0">Jumlah Penduduk</p>
+            </div>
+            <div class="col-md-4 text-center text-light">
+                <i class="fas fa-male" style="font-size: 7em"></i>
+                <h1 class="mb-0 mt-3 counter" style="font-weight: 700">100</h1>
+                <p class="m-0">Jumlah Penduduk</p>
+            </div>
+            <div class="col-md-4 text-center text-light">
+                <i class="fas fa-female" style="font-size: 7em"></i>
+                <h1 class="mb-0 mt-3 counter" style="font-weight: 700">100</h1>
+                <p class="m-0">Jumlah Penduduk</p>
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+  </section>
+
+  <section class="switchable switchable--switch feature-large" data-aos="fade-up" data-aos-duration="500">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-center" style="font-weight: 700">Jam Operasional</h3>
+                <ul>
+                    <li>Senin - Kamis &nbsp;&nbsp;: 09.00 - 14.00 WITA</li>
+                    <li>Jum'at&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 09.00 - 12.00 WITA</li>
+                    <li>Sabtu - Minggu : Libur</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-center" style="font-weight: 700">Hubungi Kami</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt text-primary" style="font-size: 1.7em"></i> Jl. Negara KM.10, RT.003, Kec. Tanah Grogot, Kab. Paser</li>
+                    <li><i class="fas fa-envelope text-primary" style="font-size: 1.7em"></i><a href="mailto:desajanjupaser@gmail.com" target="_blank">desajanjupaser@gmail.com</a></li>
+                    <li><i class="fas fa-phone text-primary"></i> +62 812-4194-4616</li>
+                </ul>
+
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+  </section>
 
 @endsection
