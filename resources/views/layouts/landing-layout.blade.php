@@ -43,7 +43,7 @@
 
             @yield('content')
 
-            <footer class="footer-7 text-center-xs bg--secondary  ">
+            <footer class="footer-7 text-center-xs bg--primary  ">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">

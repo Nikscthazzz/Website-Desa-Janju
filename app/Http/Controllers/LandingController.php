@@ -10,4 +10,8 @@ class LandingController extends Controller
     {
         return view('landing.home');
     }
+    public function profilDesa()
+    {
+        return view('landing.profil-desa');
+    }
 }

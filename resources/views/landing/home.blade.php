@@ -133,11 +133,81 @@
     <!--end of container-->
   </section>
 
-  <section class="switchable switchable--switch feature-large" data-aos="fade-up" data-aos-duration="500">
+  <section class=" " data-aos="fade-up" data-aos-duration="500">
     <div class="container">
         <div class="row">
+            <div class="col-md-12">
+                <div class="slider slider--inline-arrows" data-arrows="true">
+                    <ul class="slides">
+                        <li>
+                            <div class="testimonial row justify-content-center">
+                                <div class="col-md-6 col-12">
+                                    <img class="testimonial__image border--round mb-3" alt="Image" src="{{ asset('assets/img/kantor_desa.jpg') }}" />
+                                    <a href="#" class="btn btn-primary border-0">Lihat Halaman <i class="fas fa-angle-right"></i></a>
+                                </div>
+                                <div class="col-lg-5 col-md-6">
+                                    <h3 style="font-weight:700" class="mb-0">Title</h3>
+                                    <span class="text-primary d-inline-block my-3"><i class="fas fa-calendar-alt fa-lg"></i> Jum'at, 22 September 2022</span>
+                                    <p>Desa Janju merupakan salah satu Desa yang ada di Kecamatan Tanah Grogot Kabupaten Paser Kalimantan Timur yang terbagi menjadi 8 Rukun Tetangga (RT). Jarak tempuh dari Ibukota Kecamatan dan Ibukota Kabupaten  + 10 KM terletak pada ketinggian ..... <a href="#"><span class="text-primary">Selengkapnya</span></a></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="testimonial row justify-content-center">
+                                <div class="col-lg-2 col-md-4 col-6 text-center">
+                                    <img class="testimonial__image" alt="Image" src="{{ asset("template") }}/img/avatar-round-4.png" />
+                                </div>
+                                <div class="col-lg-7 col-md-8 col-12">
+                                    <span class="h3">&ldquo;I've been using Medium Rare's templates for a couple of years now and Stack is without a doubt their best work yet. It's fast, performant and absolutely stunning.&rdquo;
+                                    </span>
+                                    <h5>Lucas Nguyen</h5>
+                                    <span>Freelance Designer</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="testimonial row justify-content-center">
+                                <div class="col-lg-2 col-md-4 col-6 text-center">
+                                    <img class="testimonial__image" alt="Image" src="{{ asset("template") }}/img/avatar-round-3.png" />
+                                </div>
+                                <div class="col-lg-7 col-md-8 col-12">
+                                    <span class="h3">&ldquo;Variant has been a massive plus for my workflow &mdash; I can now get live mockups out in a matter of hours, my clients really love it.&rdquo;
+                                    </span>
+                                    <h5>Rob Vasquez</h5>
+                                    <span>Interface Designer &mdash; Yoke</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+  </section>
+
+  <section class="switchable switchable--switch feature-large">
+    <div class="container">
+        <div class="row">     
             <div class="col-md-4">
-                
+                <h3 class="text-center" style="font-weight: 700">Hubungi Kami</h3>
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-map-marker-alt text-primary" style="font-size: 1.7em"></i></td>
+                            <td>Jl. Negara KM.10, RT.003, Kec. Tanah Grogot, Kab. Paser</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-envelope text-primary" style="font-size: 1.7em"></i></td>
+                            <td><a href="mailto:desajanjupaser@gmail.com" target="_blank">desajanjupaser@gmail.com</a></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-phone text-primary"></i></td>
+                            <td>+62 812-4194-4616</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="col-md-4">
                 <h3 class="text-center" style="font-weight: 700">Jam Operasional</h3>
@@ -148,14 +218,9 @@
                 </ul>
             </div>
             <div class="col-md-4">
-                <h3 class="text-center" style="font-weight: 700">Hubungi Kami</h3>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt text-primary" style="font-size: 1.7em"></i> Jl. Negara KM.10, RT.003, Kec. Tanah Grogot, Kab. Paser</li>
-                    <li><i class="fas fa-envelope text-primary" style="font-size: 1.7em"></i><a href="mailto:desajanjupaser@gmail.com" target="_blank">desajanjupaser@gmail.com</a></li>
-                    <li><i class="fas fa-phone text-primary"></i> +62 812-4194-4616</li>
-                </ul>
-
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.9042944805044!2d117.48348065796327!3d0.12654599997692034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf487246d3e9725aa!2zMMKwMDcnMzUuNiJOIDExN8KwMjknMDQuNSJF!5e0!3m2!1sid!2sid!4v1657628253194!5m2!1sid!2sid" style="border:0; width:100%; border-radius: 5px;"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+            
         </div>
         <!--end of row-->
     </div>

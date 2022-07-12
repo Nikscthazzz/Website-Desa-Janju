@@ -16,5 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [LandingController::class, "home"]);
+Route::get('/profil-desa', [LandingController::class, "profilDesa"]);
+
 Route::get('/login', [AuthController::class, "login"]);
 Route::post('/login', [AuthController::class, "loginAuth"]);
