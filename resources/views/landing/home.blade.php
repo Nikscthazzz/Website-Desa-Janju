@@ -187,44 +187,4 @@
     <!--end of container-->
   </section>
 
-  <section class="switchable switchable--switch feature-large">
-    <div class="container">
-        <div class="row">     
-            <div class="col-md-4">
-                <h3 class="text-center" style="font-weight: 700">Hubungi Kami</h3>
-                <table class="table table-borderless">
-                    <tbody>
-                        <tr>
-                            <td><i class="fas fa-map-marker-alt text-primary" style="font-size: 1.7em"></i></td>
-                            <td>Jl. Negara KM.10, RT.003, Kec. Tanah Grogot, Kab. Paser</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-envelope text-primary" style="font-size: 1.7em"></i></td>
-                            <td><a href="mailto:desajanjupaser@gmail.com" target="_blank">desajanjupaser@gmail.com</a></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-phone text-primary"></i></td>
-                            <td>+62 812-4194-4616</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-md-4">
-                <h3 class="text-center" style="font-weight: 700">Jam Operasional</h3>
-                <ul>
-                    <li>Senin - Kamis &nbsp;&nbsp;: 09.00 - 14.00 WITA</li>
-                    <li>Jum'at&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 09.00 - 12.00 WITA</li>
-                    <li>Sabtu - Minggu : Libur</li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.9042944805044!2d117.48348065796327!3d0.12654599997692034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf487246d3e9725aa!2zMMKwMDcnMzUuNiJOIDExN8KwMjknMDQuNSJF!5e0!3m2!1sid!2sid!4v1657628253194!5m2!1sid!2sid" style="border:0; width:100%; border-radius: 5px;"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            
-        </div>
-        <!--end of row-->
-    </div>
-    <!--end of container-->
-  </section>
-
 @endsection

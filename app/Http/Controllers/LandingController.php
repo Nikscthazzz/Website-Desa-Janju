@@ -14,4 +14,16 @@ class LandingController extends Controller
     {
         return view('landing.profil-desa');
     }
+    public function statistikDesa()
+    {
+        return view('landing.statistik-desa');
+    }
+    public function apbDesa()
+    {
+        return view('landing.apb-desa');
+    }
+    public function layananDesa()
+    {
+        return view('landing.layanan-desa');
+    }
 }
