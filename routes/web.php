@@ -20,6 +20,7 @@ Route::get('/profil-desa', [LandingController::class, "profilDesa"]);
 Route::get('/statistik-desa', [LandingController::class, "statistikDesa"]);
 Route::get('/apb-desa', [LandingController::class, "apbDesa"]);
 Route::get('/layanan-desa', [LandingController::class, "layananDesa"]);
+Route::get('/kabar-desa', [LandingController::class, "kabarDesa"]);
 
 Route::get('/login', [AuthController::class, "login"]);
 Route::post('/login', [AuthController::class, "loginAuth"]);

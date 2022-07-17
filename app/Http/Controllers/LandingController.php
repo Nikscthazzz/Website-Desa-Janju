@@ -26,4 +26,8 @@ class LandingController extends Controller
     {
         return view("landing.layanan-desa");
     }
+    public function kabarDesa()
+    {
+        return view("landing.kabar-desa");
+    }
 }

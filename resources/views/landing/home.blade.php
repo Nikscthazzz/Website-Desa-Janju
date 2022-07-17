@@ -1,4 +1,5 @@
 @extends('layouts.landing-layout')
+@section("active_beranda", "active")
 @section("content")
 
   <section class="text-center height-100 imagebg" data-overlay="4">

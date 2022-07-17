@@ -30,6 +30,12 @@
                 });
             });
         </script>
+    
+        <style>
+            .dropdown .active {
+                color: #4A90E2 !important;
+            }
+        </style>
 
         @yield('css')
 

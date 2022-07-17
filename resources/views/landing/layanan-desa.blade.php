@@ -1,4 +1,5 @@
 @extends('layouts.landing-layout')
+@section("active_layanan", "active")
 @section("content")
 
   <section class="bg-primary p-0" style="height:63.45px !important;">
@@ -10,7 +11,6 @@
       <p class="text-justify">
         Layanan surat menyurat ini digunakan untuk membantu masyarakat Desa Janju dalam pembuatan surat secara online, sehingga dapat dilakukan dimana saja dan kapan saja tanpa harus ke Kantor Desa. Dapat langsung <a href="#">Klik Disini</a>. 
       </p>
-
 
       <div class="row">
         <div class="col-md-3">

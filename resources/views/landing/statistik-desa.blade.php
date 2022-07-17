@@ -1,4 +1,5 @@
 @extends('layouts.landing-layout')
+@section("active_statistik", "active")
 @section("content")
 
   <section class="bg-primary p-0" style="height:63.45px !important;">
