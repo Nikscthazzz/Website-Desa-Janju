@@ -20,7 +20,8 @@
         
         <link rel="stylesheet" href="{{ asset('template/fontawesome/css/all.min.css') }}">
         <link href="{{ asset('aos/dist/aos.css') }}" rel="stylesheet" />
-
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+        
         <script>
             jQuery(document).ready(function($) {
                 $('.counter').counterUp({
@@ -31,6 +32,7 @@
         </script>
 
         @yield('css')
+
     </head>
     <body class=" ">
         <a id="start"></a>
@@ -148,7 +150,9 @@
         <script>
             AOS.init();
         </script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 
+       
         @yield('script')
     </body>
 </html>

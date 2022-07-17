@@ -24,6 +24,6 @@ class LandingController extends Controller
     }
     public function layananDesa()
     {
-        return view('landing.layanan-desa');
+        return view("landing.layanan-desa");
     }
 }
