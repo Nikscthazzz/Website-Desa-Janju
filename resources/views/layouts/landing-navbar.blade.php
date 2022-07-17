@@ -49,6 +49,9 @@
                           <li class="dropdown">
                               <a href="/layanan-desa"><span>Layanan</span></a>
                           </li>
+                          <li class="dropdown">
+                              <a href="/kabar-desa"><span>Kabar Desa</span></a>
+                          </li>
                       </ul>
                   </div>
                   <!--end module-->

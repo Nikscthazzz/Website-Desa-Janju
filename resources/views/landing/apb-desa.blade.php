@@ -124,7 +124,17 @@
 @section("script")
 <script>
   $(document).ready( function () {
-      $('#table').DataTable({
+      $('#table1').DataTable({
+        searching: false,
+        ordering:  false,
+        paging: false
+      });
+      $('#table2').DataTable({
+        searching: false,
+        ordering:  false,
+        paging: false
+      });
+      $('#table3').DataTable({
         searching: false,
         ordering:  false,
         paging: false

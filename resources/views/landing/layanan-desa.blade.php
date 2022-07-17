@@ -6,50 +6,58 @@
 
   <section class="mt-5">
     <div class="container">
-      <h4 class="text-center" style="font-weight: 700">APBDesa Janju <hr class="bg-primary m-auto" style="width:20%; height:2px"></h4>
+      <h4 class="text-center" style="font-weight: 700">Layanan Desa Janju <hr class="bg-primary m-auto" style="width:20%; height:2px"></h4>
       <p class="text-justify">
-        APBDesa adalah singkatan dari Anggaran Pendapatan dan Belanja Desa  merupakan peraturan desa yang memuat sumber-sumber penerimaan dan alokasi pengeluaran desa dalam kurun waktu satu tahun. APBDesa terdiri dari pendapatan desa, belanja desa dan pembiayaan. Rancangan APBDesa dibahas dalam musyawarah perencanaan pembangunan desa. 
+        Layanan surat menyurat ini digunakan untuk membantu masyarakat Desa Janju dalam pembuatan surat secara online, sehingga dapat dilakukan dimana saja dan kapan saja tanpa harus ke Kantor Desa. Dapat langsung <a href="#">Klik Disini</a>. 
       </p>
-      
+
 
       <div class="row">
-        <div class="col-12">
-          
-          <table id="table" class="display">
-            <thead>
-                <tr>
-                    <th>Column 1</th>
-                    <th>Column 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Row 1 Data 1</td>
-                    <td>Row 1 Data 2</td>
-                </tr>
-                <tr>
-                    <td>Row 2 Data 1</td>
-                    <td>Row 2 Data 2</td>
-                </tr>
-            </tbody>
-        </table>
-
+        <div class="col-md-3">
+          <a href="#">
+            <div class="card card-1 boxed boxed--sm boxed--border bg-primary">
+              <div class="col-md-12 text-center text-light">
+                <i class="fas fa-file-alt" style="font-size: 3em"></i>
+                <h5 class="text-light">AWODOAKWDOK</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#">
+            <div class="card card-1 boxed boxed--sm boxed--border bg-primary">
+              <div class="col-md-12 text-center text-light">
+                <i class="fas fa-file-alt" style="font-size: 3em"></i>
+                <h5 class="text-light">AWODOAKWDOK</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#">
+            <div class="card card-1 boxed boxed--sm boxed--border bg-primary">
+              <div class="col-md-12 text-center text-light">
+                <i class="fas fa-file-alt" style="font-size: 3em"></i>
+                <h5 class="text-light">AWODOAKWDOK</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-3">
+          <a href="#">
+            <div class="card card-1 boxed boxed--sm boxed--border bg-primary">
+              <div class="col-md-12 text-center text-light">
+                <i class="fas fa-file-alt" style="font-size: 3em"></i>
+                <h5 class="text-light">AWODOAKWDOK</h5>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
+
     <!--end of container-->
   </section>
 
 
 
-@endsection
-@section("script")
-<script>
-  $(document).ready( function () {
-      $('#table').DataTable({
-        searching: false,
-        ordering:  false,
-        paging: false
-      });
-  } );
-</script>
 @endsection
