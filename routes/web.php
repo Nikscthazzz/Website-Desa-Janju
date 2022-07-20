@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,5 +23,9 @@ Route::get('/apb-desa', [LandingController::class, "apbDesa"]);
 Route::get('/layanan-desa', [LandingController::class, "layananDesa"]);
 Route::get('/kabar-desa', [LandingController::class, "kabarDesa"]);
 
-Route::get('/login', [AuthController::class, "login"]);
+Route::get('/login', [AuthController::class, "login"])->name("login")->middleware("guest");
 Route::post('/login', [AuthController::class, "loginAuth"]);
+
+Route::middleware(['auth'])->group(function () {
+  Route::get('/dashboard/beranda', [DashboardController::class, "beranda"]);
+});

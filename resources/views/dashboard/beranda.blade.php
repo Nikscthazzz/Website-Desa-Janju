@@ -1,4 +1,4 @@
-@extends("root.dashboard")
+@extends("layouts.dashboard")
 @section('beranda-active','active')
 @section("content")
 
@@ -22,7 +22,6 @@
                 </div>
                 <div class="form-group mb-3">
                   <label for="isi">Sambutan</label>
-                  <textarea class="form-control" id="isi" rows="15" name="sambutan" placeholder="Isi Sambutan" required>{{ str_replace('<br />', '', $sambutan->sambutan) }}</textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" id="tambahBtn">Ubah</button>
               </form>

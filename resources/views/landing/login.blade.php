@@ -15,10 +15,10 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-12">
-                            <input type="text" placeholder="username"/>
+                            <input type="text" placeholder="username" name="username"/>
                         </div>
                         <div class="col-md-12">
-                            <input type="password" placeholder="password"/>
+                            <input type="password" placeholder="password" name="password"/>
                         </div>
                         <div class="col-md-12">
                             <button class="btn btn--primary type--uppercase" type="submit">Login</button>
@@ -29,12 +29,6 @@
                       @endif
                     <!--end of row-->
                 </form>
-                {{-- <span class="type--fine-print block">Dont have an account yet?
-                    <a href="page-accounts-create-1.html">Create account</a>
-                </span>
-                <span class="type--fine-print block">Forgot your username or password?
-                    <a href="page-accounts-recover.html">Recover account</a>
-                </span> --}}
             </div>
         </div>
         <!--end of row-->
