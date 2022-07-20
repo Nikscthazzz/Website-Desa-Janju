@@ -10,12 +10,12 @@
 	<meta name="keywords" content="adminkit, bootstrap, bootstrap 5, admin, dashboard, template, responsive, css, sass, html, theme, front-end, ui kit, web">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="shortcut icon" href="{{ asset("logo.png") }}" />
+	<link rel="icon" type="image/x-icon" href="{{ asset('assets/img/logo_paser.png') }}">
 
 
 	<link rel="canonical" href="https://demo-basic.adminkit.io/" />
 
-	<title>Dashboard SMPN 7 Bontang</title>
+	<title>Dashboard Website Desa Janju</title>
 
 	<link href="{{ asset("dashboard_assets") }}/css/app.css" rel="stylesheet">
 
@@ -36,19 +36,21 @@
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" href="/">
-          <span class="align-middle">SMPN 7 Bontang</span>
+          <span class="align-middle">
+						<img class="img img-fluid" alt="logo" src="{{ asset('assets') }}/img/logo_paser_long.png" />
+					</span>
         </a>
 
 				<ul class="sidebar-nav">
 					<li class="sidebar-header">
 						Halaman Admin
 					</li>
-					<li class="sidebar-item @yield("dashboard-active")">
-						<a class="sidebar-link" href="/dashboard">
-              <i class="fas fa-tachometer-alt align-middle"></i> <span class="align-middle">Dashboard</span>
+					<li class="sidebar-item @yield("beranda-active")">
+						<a class="sidebar-link" href="/dashboard/beranda">
+              <i class="fas fa-tachometer-alt align-middle"></i> <span class="align-middle">Beranda</span>
             </a>
 					</li>					
-					<li class="sidebar-item @yield("beranda-active")">
+					{{-- <li class="sidebar-item @yield("beranda-active")">
 						<a class="sidebar-link" href="/kelola-beranda">
               <i class="far fa-file-alt align-middle"></i> <span class="align-middle">Kelola Beranda</span>
             </a>
@@ -67,7 +69,7 @@
 						<a class="sidebar-link" href="/kelola-pegawai">
               <i class="fas fa-chalkboard-teacher align-middle"></i> <span class="align-middle">Kelola Pegawai</span>
             </a>
-					</li>
+					</li> --}}
 					<li class="sidebar-header">
 						Authenticate
 					</li>
@@ -94,7 +96,7 @@
               </a>
 
 							<a class="nav-link  d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                <img src="logo.png" style="object-fit: cover" class="avatar img-fluid rounded-circle rounded me-1" alt="SMPN 7 Bontang" /> <span class="text-dark">SMP Negeri 7 Bontang</span>
+								<strong><span class="text-dark">DESA JANJU</span></strong>
               </a>
 						</li>
 					</ul>
@@ -108,7 +110,7 @@
 					<div class="row text-muted">
 						<div class="col-6 text-start">
 							<p class="mb-0">
-								<a class="text-muted" href="/" target="_blank"><strong>SMP Negeri 7 Bontang</strong></a> &copy;
+								<a class="text-muted" href="/" target="_blank"><strong>DESA JANJU</strong></a> &copy;
 							</p>
 						</div>
 					</div>
