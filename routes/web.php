@@ -37,4 +37,6 @@ Route::middleware(['auth'])->group(function () {
       Route::delete('/delete/{masyarakat}', [DashboardController::class, "kelolaStatistikDelete"]);
     });
   });
+
+  Route::get('/logout', [AuthController::class, "logout"]);
 });

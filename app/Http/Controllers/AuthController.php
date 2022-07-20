@@ -14,9 +14,14 @@ class AuthController extends Controller
     public function loginAuth(Request $request)
     {
         if (Auth::attempt(["username" => $request->username, "password" => $request->password])) {
-            return redirect("/dashboard/beranda");
+            return redirect("/dashboard/");
         } else {
             return back()->with("pesan", "Username atau password salah!");
         }
+    }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect("/");
     }
 }

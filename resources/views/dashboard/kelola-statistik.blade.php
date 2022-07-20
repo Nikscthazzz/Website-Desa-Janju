@@ -20,13 +20,13 @@
                   <div class="col-md-12">
                     <div class="mb-3">
                       <label for="nik" class="form-label">NIK</label>
-                      <input type="text" class="form-control" id="nik" placeholder="Masukkan NIK" name="nik">
+                      <input type="text" class="form-control" id="nik" placeholder="Masukkan NIK" required name="nik">
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="mb-3">
                       <label for="nama" class="form-label">Nama Lengkap</label>
-                      <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Lengkap" name="nama_lengkap">
+                      <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Lengkap" required name="nama_lengkap">
                     </div>
                   </div>
                   <div class="col-md-12">
@@ -34,7 +34,7 @@
                       <div class="col-md-4">
                         <div class="mb-3">
                           <label for="jk" class="form-label">Jenis Kelamin</label>
-                          <select class="form-select" id="jk" aria-label="Default select example" name="jenis_kelamin">
+                          <select class="form-select" id="jk" aria-label="Default select example" required name="jenis_kelamin">
                             <option selected>Pilih Jenis Kelamin</option>
                             @foreach ($data["jenis_kelamin"] as $jk)
                               <option value="{{ $jk }}">{{ $jk }}</option>
@@ -45,7 +45,7 @@
                       <div class="col-md-4">
                         <div class="mb-3">
                           <label for="agama" class="form-label">Agama</label>
-                          <select class="form-select" id="agama" aria-label="Default select example" name="agama">
+                          <select class="form-select" id="agama" aria-label="Default select example" required name="agama">
                             <option selected>Pilih Agama</option>
                             @foreach ($data["agama"] as $agama)
                               <option value="{{ $agama }}">{{ $agama }}</option>
@@ -56,7 +56,7 @@
                       <div class="col-md-4">
                         <div class="mb-3">
                           <label for="pendidikan" class="form-label">Pendidikan</label>
-                          <select class="form-select" aria-label="Default select example" name="pendidikan">
+                          <select class="form-select" aria-label="Default select example" required name="pendidikan">
                             <option selected>Pilih Pendidikan</option>
                             @foreach ($data["pendidikan"] as $pendidikan)
                               <option value="{{ $pendidikan }}">{{ $pendidikan }}</option>
@@ -69,7 +69,7 @@
                       <div class="col-md-4">
                         <div class="mb-3">
                           <label for="pekerjaan" class="form-label">Pekerjaaan</label>
-                          <input class="form-control" list="listPekerjaan" id="pekerjaan" placeholder="Pilih Pekerjaan" name="pekerjaan">
+                          <input class="form-control" list="listPekerjaan" id="pekerjaan" placeholder="Pilih Pekerjaan" required name="pekerjaan">
                           <datalist id="listPekerjaan">
                             @foreach ($data["pekerjaan"] as $pk)
                               <option value="{{ $pk }}">{{ $pk }}</option>
@@ -81,7 +81,7 @@
                       <div class="col-md-4">
                         <div class="mb-3">
                           <label for="status_pernikahan" class="form-label">Status Pernikahan</label>
-                          <select class="form-select" id="status_pernikahan" aria-label="Default select example" name="status_pernikahan">
+                          <select class="form-select" id="status_pernikahan" aria-label="Default select example" required name="status_pernikahan">
                             <option selected>Pilih Status Pernikahan</option>
                             @foreach ($data["status_pernikahan"] as $status_pernikahan)
                               <option value="{{ $status_pernikahan }}">{{ $status_pernikahan }}</option>
@@ -92,7 +92,7 @@
                       <div class="col-md-4">
                         <div class="mb-3">
                           <label for="kewarganegaraan" class="form-label">Kewarganegaraan</label>
-                          <select class="form-select" id="kewarganegaraan" aria-label="Default select example" name="kewarganegaraan">
+                          <select class="form-select" id="kewarganegaraan" aria-label="Default select example" required name="kewarganegaraan">
                             <option selected>Pilih Kewarganegaraan</option>
                             @foreach ($data["kewarganegaraan"] as $kewarganegaraan)
                               <option value="{{ $kewarganegaraan }}">{{ $kewarganegaraan }}</option>
@@ -183,13 +183,13 @@
               <div class="col-md-12">
                 <div class="mb-3">
                   <label for="nik" class="form-label">NIK</label>
-                  <input type="text" class="form-control" id="nik" placeholder="Masukkan NIK" value="{{ $msy->nik }}" name="nik">
+                  <input type="text" class="form-control" id="nik" placeholder="Masukkan NIK" value="{{ $msy->nik }}" required name="nik">
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="mb-3">
                   <label for="nama" class="form-label">Nama Lengkap</label>
-                  <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Lengkap" value="{{ $msy->nama_lengkap }}" name="nama_lengkap">
+                  <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Lengkap" value="{{ $msy->nama_lengkap }}" required name="nama_lengkap">
                 </div>
               </div>
               <div class="col-md-12">
@@ -197,7 +197,7 @@
                   <div class="col-md-4">
                     <div class="mb-3">
                       <label for="jk" class="form-label">Jenis Kelamin</label>
-                      <select class="form-select" id="jk" aria-label="Default select example" name="jenis_kelamin">
+                      <select class="form-select" id="jk" aria-label="Default select example" required name="jenis_kelamin">
                         <option>Pilih Jenis Kelamin</option>
                         @foreach ($data["jenis_kelamin"] as $jk)
                           <option value="{{ $jk }}" @if($msy->jenis_kelamin===$jk) selected @endif>{{ $jk }}</option>
@@ -208,7 +208,7 @@
                   <div class="col-md-4">
                     <div class="mb-3">
                       <label for="agama" class="form-label">Agama</label>
-                      <select class="form-select" id="agama" aria-label="Default select example" name="agama">
+                      <select class="form-select" id="agama" aria-label="Default select example" required name="agama">
                         <option>Pilih Agama</option>
                         @foreach ($data["agama"] as $agama)
                           <option value="{{ $agama }}" @if($msy->agama===$agama) selected @endif>{{ $agama }}</option>
@@ -219,7 +219,7 @@
                   <div class="col-md-4">
                     <div class="mb-3">
                       <label for="pendidikan" class="form-label">Pendidikan</label>
-                      <select class="form-select" aria-label="Default select example" name="pendidikan">
+                      <select class="form-select" aria-label="Default select example" required name="pendidikan">
                         <option>Pilih Pendidikan</option>
                         @foreach ($data["pendidikan"] as $pendidikan)
                           <option value="{{ $pendidikan }}" @if($msy->pendidikan===$pendidikan) selected @endif>{{ $pendidikan }}</option>
@@ -232,7 +232,7 @@
                   <div class="col-md-4">
                     <div class="mb-3">
                       <label for="pekerjaan" class="form-label">Pekerjaaan</label>
-                      <input class="form-control" list="listPekerjaan" id="pekerjaan" placeholder="Pilih Pekerjaan" value="{{ $msy->pekerjaan }}" name="pekerjaan">
+                      <input class="form-control" list="listPekerjaan" id="pekerjaan" placeholder="Pilih Pekerjaan" value="{{ $msy->pekerjaan }}" required name="pekerjaan">
                       <datalist id="listPekerjaan">
                         @foreach ($data["pekerjaan"] as $pk)
                           <option value="{{ $pk }}">{{ $pk }}</option>
@@ -244,7 +244,7 @@
                   <div class="col-md-4">
                     <div class="mb-3">
                       <label for="status_pernikahan" class="form-label">Status Pernikahan</label>
-                      <select class="form-select" id="status_pernikahan" aria-label="Default select example" name="status_pernikahan">
+                      <select class="form-select" id="status_pernikahan" aria-label="Default select example" required name="status_pernikahan">
                         <option>Pilih Status Pernikahan</option>
                         @foreach ($data["status_pernikahan"] as $status_pernikahan)
                           <option value="{{ $status_pernikahan }}" @if($msy->status_pernikahan===$status_pernikahan) selected @endif>{{ $status_pernikahan }}</option>
@@ -255,7 +255,7 @@
                   <div class="col-md-4">
                     <div class="mb-3">
                       <label for="kewarganegaraan" class="form-label">Kewarganegaraan</label>
-                      <select class="form-select" id="kewarganegaraan" aria-label="Default select example" name="kewarganegaraan">
+                      <select class="form-select" id="kewarganegaraan" aria-label="Default select example" required name="kewarganegaraan">
                         <option>Pilih Kewarganegaraan</option>
                         @foreach ($data["kewarganegaraan"] as $kewarganegaraan)
                           <option value="{{ $kewarganegaraan }}" @if($msy->kewarganegaraan===$kewarganegaraan) selected @endif>{{ $kewarganegaraan }}</option>
@@ -268,7 +268,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-            <button type="submit" class="btn btn-primary" name="id" value="{{ $msy->id }}">Edit</button>
+            <button type="submit" class="btn btn-primary" required name="id" value="{{ $msy->id }}">Edit</button>
             </form>
           </div>
         </div>
