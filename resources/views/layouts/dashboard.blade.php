@@ -47,7 +47,13 @@
 					</li>
 					<li class="sidebar-item @yield("beranda-active")">
 						<a class="sidebar-link" href="/dashboard/beranda">
-              <i class="fas fa-tachometer-alt align-middle"></i> <span class="align-middle">Beranda</span>
+              <i class="fas fa-tachometer-alt align-middle"></i> <span class="align-middle">Dashboard</span>
+            </a>
+					</li>					
+					<li class="sidebar-item @yield("statistik-active")">
+						<a class="sidebar-link" href="/dashboard/kelola-statistik">
+              <i class="fa fa-chart-pie align-middle"></i>
+							<span class="align-middle">Kelola Statistik Desa</span>
             </a>
 					</li>					
 					{{-- <li class="sidebar-item @yield("beranda-active")">

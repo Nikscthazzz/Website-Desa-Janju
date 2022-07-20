@@ -27,5 +27,8 @@ Route::get('/login', [AuthController::class, "login"])->name("login")->middlewar
 Route::post('/login', [AuthController::class, "loginAuth"]);
 
 Route::middleware(['auth'])->group(function () {
-  Route::get('/dashboard/beranda', [DashboardController::class, "beranda"]);
+  Route::prefix("dashboard")->group(function () {
+    Route::get('beranda', [DashboardController::class, "beranda"]);
+    Route::get('kelola-statistik', [DashboardController::class, "kelolaStatistik"]);
+  });
 });
