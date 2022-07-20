@@ -46,7 +46,7 @@
 						Halaman Admin
 					</li>
 					<li class="sidebar-item @yield("beranda-active")">
-						<a class="sidebar-link" href="/dashboard/beranda">
+						<a class="sidebar-link" href="/dashboard/">
               <i class="fas fa-tachometer-alt align-middle"></i> <span class="align-middle">Dashboard</span>
             </a>
 					</li>					

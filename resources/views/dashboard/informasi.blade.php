@@ -205,7 +205,6 @@
     </div>
   </div>
   <!-- END Hapus Modal -->
-
 @endforeach
 
 @endsection

@@ -28,7 +28,13 @@ Route::post('/login', [AuthController::class, "loginAuth"]);
 
 Route::middleware(['auth'])->group(function () {
   Route::prefix("dashboard")->group(function () {
-    Route::get('beranda', [DashboardController::class, "beranda"]);
-    Route::get('kelola-statistik', [DashboardController::class, "kelolaStatistik"]);
+    Route::get('/', [DashboardController::class, "beranda"]);
+
+    Route::prefix("kelola-statistik")->group(function () {
+      Route::get('/', [DashboardController::class, "kelolaStatistik"]);
+      Route::post('/tambah', [DashboardController::class, "kelolaStatistikTambah"]);
+      Route::post('/edit/{masyarakat}', [DashboardController::class, "kelolaStatistikEdit"]);
+      Route::delete('/delete/{masyarakat}', [DashboardController::class, "kelolaStatistikDelete"]);
+    });
   });
 });
