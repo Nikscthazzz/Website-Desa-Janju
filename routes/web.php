@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KelolaApbdesController;
+use App\Http\Controllers\KelolaStatistikController;
 use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,19 +24,23 @@ Route::get('/statistik-desa', [LandingController::class, "statistikDesa"]);
 Route::get('/apb-desa', [LandingController::class, "apbDesa"]);
 Route::get('/layanan-desa', [LandingController::class, "layananDesa"]);
 Route::get('/kabar-desa', [LandingController::class, "kabarDesa"]);
-
 Route::get('/login', [AuthController::class, "login"])->name("login")->middleware("guest");
 Route::post('/login', [AuthController::class, "loginAuth"]);
+
 
 Route::middleware(['auth'])->group(function () {
   Route::prefix("dashboard")->group(function () {
     Route::get('/', [DashboardController::class, "beranda"]);
 
-    Route::prefix("kelola-statistik")->group(function () {
-      Route::get('/', [DashboardController::class, "kelolaStatistik"]);
-      Route::post('/tambah', [DashboardController::class, "kelolaStatistikTambah"]);
-      Route::post('/edit/{masyarakat}', [DashboardController::class, "kelolaStatistikEdit"]);
-      Route::delete('/delete/{masyarakat}', [DashboardController::class, "kelolaStatistikDelete"]);
+    Route::prefix("kelola-statistik")->controller(KelolaStatistikController::class)->group(function () {
+      Route::get('/', "kelolaStatistik");
+      Route::post('/tambah', "kelolaStatistikTambah");
+      Route::post('/edit/{masyarakat}', "kelolaStatistikEdit");
+      Route::delete('/delete/{masyarakat}', "kelolaStatistikDelete");
+    });
+
+    Route::prefix("kelola-apbdes")->controller(KelolaApbdesController::class)->group(function () {
+      Route::get('/', "kelolaApbdes");
     });
   });
 

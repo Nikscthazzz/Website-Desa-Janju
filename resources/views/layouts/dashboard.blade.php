@@ -56,6 +56,12 @@
 							<span class="align-middle">Kelola Statistik Desa</span>
             </a>
 					</li>					
+					<li class="sidebar-item @yield("apbdes-active")">
+						<a class="sidebar-link" href="/dashboard/kelola-apbdes">
+              <i class="fas fa-money-bill align-middle"></i>
+							<span class="align-middle">Kelola APBDes</span>
+            </a>
+					</li>					
 					{{-- <li class="sidebar-item @yield("beranda-active")">
 						<a class="sidebar-link" href="/kelola-beranda">
               <i class="far fa-file-alt align-middle"></i> <span class="align-middle">Kelola Beranda</span>
