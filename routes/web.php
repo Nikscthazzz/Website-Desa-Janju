@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KelolaApbdesController;
+use App\Http\Controllers\KelolaLayananController;
 use App\Http\Controllers\KelolaStatistikController;
 use App\Http\Controllers\LandingController;
 use Illuminate\Support\Facades\Route;
@@ -41,6 +42,10 @@ Route::middleware(['auth'])->group(function () {
 
     Route::prefix("kelola-apbdes")->controller(KelolaApbdesController::class)->group(function () {
       Route::get('/', "kelolaApbdes");
+    });
+
+    Route::prefix("kelola-layanan")->controller(KelolaLayananController::class)->group(function () {
+      Route::get('/', "kelolaLayanan");
     });
   });
 

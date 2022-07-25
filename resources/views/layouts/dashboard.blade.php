@@ -62,6 +62,12 @@
 							<span class="align-middle">Kelola APBDes</span>
             </a>
 					</li>					
+					<li class="sidebar-item @yield("layanan-active")">
+						<a class="sidebar-link" href="/dashboard/kelola-layanan">
+              <i class="fas fa-receipt align-middle"></i>
+							<span class="align-middle">Kelola Layanan</span>
+            </a>
+					</li>					
 					{{-- <li class="sidebar-item @yield("beranda-active")">
 						<a class="sidebar-link" href="/kelola-beranda">
               <i class="far fa-file-alt align-middle"></i> <span class="align-middle">Kelola Beranda</span>
