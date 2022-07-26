@@ -69,7 +69,7 @@
   <section>
     <div class="container">
       <h4 class="text-center" style="font-weight: 700">Struktur Pemerintahan Desa Janju <hr class="bg-primary m-auto" style="width:20%; height:2px"></h4>
-      <img src="{{ asset("assets/img/struktur_pemerintahan.png") }}" class="img-fluid">
+      <img src="{{ asset("storage/struktur_organisasi/" . $struktur_organisasi) }}" class="img-fluid">
     </div>
     <!--end of container-->
   </section>

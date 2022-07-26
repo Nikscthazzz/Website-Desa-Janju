@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\KabarDesa;
 use App\Models\Masyarakat;
 use App\Models\Pengunjung;
+use App\Models\StrukturOrganisasi;
 use Illuminate\Http\Request;
 
 class LandingController extends Controller
@@ -28,7 +29,8 @@ class LandingController extends Controller
     }
     public function profilDesa()
     {
-        return view('landing.profil-desa');
+        $struktur_organisasi = StrukturOrganisasi::latest()->pluck("gambar")[0];
+        return view('landing.profil-desa', compact("struktur_organisasi"));
     }
     public function statistikDesa()
     {
