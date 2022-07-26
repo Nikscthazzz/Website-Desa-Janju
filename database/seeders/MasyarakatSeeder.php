@@ -16,6 +16,7 @@ class MasyarakatSeeder extends Seeder
     public function run()
     {
         Masyarakat::create([
+            "user_id" => 1,
             "nik" => "38103219312381029",
             "nama_lengkap" => "sallie mansurina",
             "jenis_kelamin" => "LAKI-LAKI",
