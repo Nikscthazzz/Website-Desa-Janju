@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('apbdes', function (Blueprint $table) {
             $table->id();
+            $table->integer("user_id");
             $table->string("tahun");
             $table->string("jenis");
             $table->string("nama");
