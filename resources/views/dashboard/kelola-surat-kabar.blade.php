@@ -6,11 +6,11 @@
   <div class="container p-0">
 
     <div class="row">
-      <h1 class="h3 mb-3">Kelola Layanan Desa Janju</h1>
+      <h1 class="h3 mb-3">Kelola Kabar Desa Janju</h1>
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <h5 class="card-title mb-0">Tambah Layanan Janju</h5>
+            <h5 class="card-title mb-0">Tambah Kabar Janju</h5>
           </div>
           <div class="card-body">
             <div class="row">
@@ -21,19 +21,19 @@
                     <div class="col-md-12">
                       <div class="mb-3">
                         <label class="form-label">Judul</label>
-                        <input type="text" name="" class="form-control" placeholder="Masukkan judul">
+                        <input type="text" name="judul" class="form-control" placeholder="Masukkan judul">
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="mb-3">
                         <label class="form-label">Isi</label>
-                        <textarea name="" cols="30" class="form-control" rows="10" placeholder="Masukkan isi"></textarea>
+                        <textarea name="isi" cols="30" class="form-control" rows="10" placeholder="Masukkan isi"></textarea>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="mb-3">
                         <label class="form-label">Gambar</label>
-                        <input type="file" name="" class="form-control">
+                        <input type="file" name="gambar_file" class="form-control" accept="image/*">
                       </div>
                     </div>
                   </div>
@@ -50,7 +50,7 @@
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <h5 class="card-title">Daftar Data APBDesa Janju</h5>
+            <h5 class="card-title">Daftar Kabar Desa Janju</h5>
           </div>
           <div class="card-body">
             <div class="row mb-5">
@@ -74,12 +74,13 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach ($kabar_desa as $kd)
                     <tr>
-                      <td>1</td>
-                      <td>ajwdijawjid</td>
-                      <td>awdkpakdwokaopwdoappdk</td>
-                      <td>ajidajwdajoiw</td>
-                      <td>ajidajwdajoiw</td>
+                      <td>{{ $loop->iteration }}</td>
+                      <td>{{ date_format($kd->created_at,"D, d-m-Y"); }}</td>
+                      <td>{{ $kd->judul }}</td>
+                      <td>{{ $kd->isi }}</td>
+                      <td><img src="{{ asset('storage/kabar_desa/' . $kd->gambar) }}" alt="gambar" width="100" class="img"></td>
                       <td>
                         <div class="d-flex">
                           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit-">
@@ -91,6 +92,7 @@
                         </div>
                       </td>
                     </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>
