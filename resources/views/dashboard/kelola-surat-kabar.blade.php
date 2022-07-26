@@ -1,5 +1,5 @@
 @extends("layouts.dashboard")
-@section('layanan-active','active')
+@section('surat-kabar-active','active')
 @section("content")
 
 <main class="content">
@@ -15,19 +15,25 @@
           <div class="card-body">
             <div class="row">
               <div class="col-md-12">
-                <form action="/dashboard/kelola-statistik/tambah" method="post" enctype="multipart/form-data">
+                <form action="/dashboard/kelola-surat-kabar/tambah" method="post" enctype="multipart/form-data">
                   @csrf
                   <div class="row">
                     <div class="col-md-12">
                       <div class="mb-3">
-                        <label class="form-label">Nama Layanan</label>
-                        <input type="text" name="" class="form-control" placeholder="Masukkan nama layanan">
+                        <label class="form-label">Judul</label>
+                        <input type="text" name="" class="form-control" placeholder="Masukkan judul">
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="mb-3">
-                        <label class="form-label">Tautan Layanan</label>
-                        <input type="text" name="" class="form-control" placeholder="Masukkan tautan layanan">
+                        <label class="form-label">Isi</label>
+                        <textarea name="" cols="30" class="form-control" rows="10" placeholder="Masukkan isi"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="mb-3">
+                        <label class="form-label">Gambar</label>
+                        <input type="file" name="" class="form-control">
                       </div>
                     </div>
                   </div>
@@ -60,8 +66,10 @@
                   <thead>
                     <tr>
                       <th>No</th>
-                      <th>Nama Layanan</th>
-                      <th>Tautan Layanan</th>
+                      <th>Hari, Tanggal</th>
+                      <th>Judul</th>
+                      <th>Isi</th>
+                      <th>Gambar</th>
                       <th>Aksi</th>
                     </tr>
                   </thead>
@@ -69,6 +77,8 @@
                     <tr>
                       <td>1</td>
                       <td>ajwdijawjid</td>
+                      <td>awdkpakdwokaopwdoappdk</td>
+                      <td>ajidajwdajoiw</td>
                       <td>ajidajwdajoiw</td>
                       <td>
                         <div class="d-flex">

@@ -68,6 +68,12 @@
 							<span class="align-middle">Kelola Layanan</span>
             </a>
 					</li>					
+					<li class="sidebar-item @yield("surat-kabar-active")">
+						<a class="sidebar-link" href="/dashboard/kelola-surat-kabar">
+              <i class="fas fa-newspaper align-middle"></i>
+							<span class="align-middle">Kelola Surat Kabar</span>
+            </a>
+					</li>					
 					{{-- <li class="sidebar-item @yield("beranda-active")">
 						<a class="sidebar-link" href="/kelola-beranda">
               <i class="far fa-file-alt align-middle"></i> <span class="align-middle">Kelola Beranda</span>
