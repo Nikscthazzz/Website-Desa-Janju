@@ -28,10 +28,10 @@
                         </div>
                       </div>
                     </div>
-                    <h1 class="mt-1 mb-3">{{ $grafik["hari"] }}</h1>
+                    <h1 class="mt-1 mb-3">{{ $grafik["hari"]["nilai"] }}</h1>
                     <div class="mb-0">
-                      <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-                      <span class="text-muted">Dari hari kemarin</span>
+                      <span class="text-muted">Selisih 
+                      <span class="@if($grafik['hari']['selisih'] > 0) text-success @else text-danger @endif"> <i class="mdi mdi-arrow-bottom-right"></i> {{ $grafik["hari"]["selisih"] }} </span> dari hari kemarin</span>
                     </div>
                   </div>
                 </div>
@@ -50,10 +50,10 @@
                         </div>
                       </div>
                     </div>
-                    <h1 class="mt-1 mb-3">{{ $grafik["bulan"] }}</h1>
+                    <h1 class="mt-1 mb-3">{{ $grafik["bulan"]["nilai"] }}</h1>
                     <div class="mb-0">
-                      <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-                      <span class="text-muted">Dari bulan kemarin</span>
+                      <span class="text-muted">Selisih 
+                      <span class="@if($grafik['bulan']['selisih'] > 0) text-success @else text-danger @endif"> <i class="mdi mdi-arrow-bottom-right"></i> {{ $grafik["bulan"]["selisih"] }} </span> dari bulan kemarin</span>
                     </div>
                   </div>
                 </div>

@@ -14,11 +14,20 @@ class DashboardController extends Controller
 {
     public function beranda()
     {
-        $tanggal = date("Y-m-d");
         $data["struktur_organisasi"] = StrukturOrganisasi::latest()->pluck("gambar")[0];
+
+        $tanggal = date("Y-m-d");
+        $tanggalKemarin =  date('d-m-Y', strtotime("-1 days"));
+        $bulanKemarin =  date('m', strtotime("-1 months"));
         $data["grafik"] = [
-            "hari" => Pengunjung::where("tanggal", $tanggal)->get()->count(),
-            "bulan" => Pengunjung::whereMonth("tanggal", date("m"))->whereYear("tanggal", date("Y"))->get()->count(),
+            "hari" => [
+                "nilai" => Pengunjung::where("tanggal", $tanggal)->get()->count(),
+                "selisih" => Pengunjung::where("tanggal", $tanggal)->get()->count() - Pengunjung::where("tanggal", $tanggalKemarin)->get()->count()
+            ],
+            "bulan" => [
+                "nilai" => Pengunjung::whereMonth("tanggal", date("m"))->whereYear("tanggal", date("Y"))->get()->count(),
+                "selisih" => Pengunjung::whereMonth("tanggal", date("m"))->whereYear("tanggal", date("Y"))->get()->count() - Pengunjung::whereMonth("tanggal", $bulanKemarin)->whereYear("tanggal", date("Y"))->get()->count()
+            ],
             "total" => Pengunjung::all()->count()
         ];
         return view("dashboard.beranda", $data);
