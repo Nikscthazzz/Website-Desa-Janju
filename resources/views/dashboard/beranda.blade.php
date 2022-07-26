@@ -20,7 +20,7 @@
                   <div class="card-body">
                     <div class="row">
                       <div class="col mt-0">
-                        <h5 class="card-title">Sales</h5>
+                        <h5 class="card-title">Pengunjung Hari Ini</h5>
                       </div>
                       <div class="col-auto">
                         <div class="stat text-primary">
@@ -28,10 +28,10 @@
                         </div>
                       </div>
                     </div>
-                    <h1 class="mt-1 mb-3">2.382</h1>
+                    <h1 class="mt-1 mb-3">{{ $grafik["hari"] }}</h1>
                     <div class="mb-0">
                       <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-                      <span class="text-muted">Since last week</span>
+                      <span class="text-muted">Dari hari kemarin</span>
                     </div>
                   </div>
                 </div>
@@ -42,7 +42,7 @@
                   <div class="card-body">
                     <div class="row">
                       <div class="col mt-0">
-                        <h5 class="card-title">Sales</h5>
+                        <h5 class="card-title">Pengunjung Bulan Ini</h5>
                       </div>
                       <div class="col-auto">
                         <div class="stat text-primary">
@@ -50,10 +50,10 @@
                         </div>
                       </div>
                     </div>
-                    <h1 class="mt-1 mb-3">2.382</h1>
+                    <h1 class="mt-1 mb-3">{{ $grafik["bulan"] }}</h1>
                     <div class="mb-0">
                       <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-                      <span class="text-muted">Since last week</span>
+                      <span class="text-muted">Dari bulan kemarin</span>
                     </div>
                   </div>
                 </div>
@@ -64,7 +64,7 @@
                   <div class="card-body">
                     <div class="row">
                       <div class="col mt-0">
-                        <h5 class="card-title">Sales</h5>
+                        <h5 class="card-title">Total Pengunjung</h5>
                       </div>
                       <div class="col-auto">
                         <div class="stat text-primary">
@@ -72,10 +72,10 @@
                         </div>
                       </div>
                     </div>
-                    <h1 class="mt-1 mb-3">2.382</h1>
+                    <h1 class="mt-1 mb-3">{{ $grafik["total"] }}</h1>
                     <div class="mb-0">
-                      <span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
-                      <span class="text-muted">Since last week</span>
+                      <span class="text-danger">&nbsp;</span>
+                      <span class="text-muted">&nbsp;</span>
                     </div>
                   </div>
                 </div>
