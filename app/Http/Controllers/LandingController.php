@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\KabarDesa;
+use App\Models\Masyarakat;
 use App\Models\Pengunjung;
 use Illuminate\Http\Request;
 
@@ -9,10 +11,20 @@ class LandingController extends Controller
 {
     public function home()
     {
+        // $data = Pengunjung::first();
+        // return date("Y", strtotime($data->tanggal));
         Pengunjung::create([
-            "tanggal" => date("d-m-Y")
+            "tanggal" => date("Y-m-d")
         ]);
-        return view('landing.home');
+
+        $data = [];
+        $data["mas_all"] = Masyarakat::all()->count();
+        $data["mas_lk"] = Masyarakat::where("jenis_kelamin", "LAKI-LAKI")->count();
+        $data["mas_pr"] = Masyarakat::where("jenis_kelamin", "PEREMPUAN")->count();
+
+        $data["kabar_desa"] = KabarDesa::take(3);
+
+        return view('landing.home', $data);
     }
     public function profilDesa()
     {

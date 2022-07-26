@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Masyarakat;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -24,5 +23,6 @@ class DatabaseSeeder extends Seeder
 
         $this->call(UserSeeder::class);
         $this->call(MasyarakatSeeder::class);
+        $this->call(StrukturOrganisasiSeeder::class);
     }
 }

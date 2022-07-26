@@ -115,17 +115,17 @@
         <div class="row">
             <div class="col-md-4 text-center text-light">
                 <i class="fas fa-users" style="font-size: 7em"></i><br>
-                <h1 class="mb-0 mt-3 counter" style="font-weight: 700">100</h1>
+                <h1 class="mb-0 mt-3 counter" style="font-weight: 700">{{ $mas_all }}</h1>
                 <p class="m-0">Jumlah Penduduk</p>
             </div>
             <div class="col-md-4 text-center text-light">
                 <i class="fas fa-male" style="font-size: 7em"></i>
-                <h1 class="mb-0 mt-3 counter" style="font-weight: 700">100</h1>
+                <h1 class="mb-0 mt-3 counter" style="font-weight: 700">{{ $mas_lk }}</h1>
                 <p class="m-0">Jumlah Penduduk</p>
             </div>
             <div class="col-md-4 text-center text-light">
                 <i class="fas fa-female" style="font-size: 7em"></i>
-                <h1 class="mb-0 mt-3 counter" style="font-weight: 700">100</h1>
+                <h1 class="mb-0 mt-3 counter" style="font-weight: 700">{{ $mas_pr }}</h1>
                 <p class="m-0">Jumlah Penduduk</p>
             </div>
         </div>
@@ -140,6 +140,7 @@
             <div class="col-md-12">
                 <div class="slider slider--inline-arrows" data-arrows="true">
                     <ul class="slides">
+                        @foreach ($kabar_desa as $kd)
                         <li>
                             <div class="testimonial row justify-content-center">
                                 <div class="col-md-6 col-12">
@@ -153,32 +154,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
-                            <div class="testimonial row justify-content-center">
-                                <div class="col-lg-2 col-md-4 col-6 text-center">
-                                    <img class="testimonial__image" alt="Image" src="{{ asset("template") }}/img/avatar-round-4.png" />
-                                </div>
-                                <div class="col-lg-7 col-md-8 col-12">
-                                    <span class="h3">&ldquo;I've been using Medium Rare's templates for a couple of years now and Stack is without a doubt their best work yet. It's fast, performant and absolutely stunning.&rdquo;
-                                    </span>
-                                    <h5>Lucas Nguyen</h5>
-                                    <span>Freelance Designer</span>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="testimonial row justify-content-center">
-                                <div class="col-lg-2 col-md-4 col-6 text-center">
-                                    <img class="testimonial__image" alt="Image" src="{{ asset("template") }}/img/avatar-round-3.png" />
-                                </div>
-                                <div class="col-lg-7 col-md-8 col-12">
-                                    <span class="h3">&ldquo;Variant has been a massive plus for my workflow &mdash; I can now get live mockups out in a matter of hours, my clients really love it.&rdquo;
-                                    </span>
-                                    <h5>Rob Vasquez</h5>
-                                    <span>Interface Designer &mdash; Yoke</span>
-                                </div>
-                            </div>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

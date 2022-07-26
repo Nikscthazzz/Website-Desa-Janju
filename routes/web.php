@@ -41,6 +41,7 @@ Route::post('/login', [AuthController::class, "loginAuth"]);
 Route::middleware(['auth'])->group(function () {
   Route::prefix("dashboard")->group(function () {
     Route::get('/', [DashboardController::class, "beranda"]);
+    Route::post('/ubah-struktur-organisasi', [DashboardController::class, "ubahStrukturOrganisasi"]);
 
     Route::prefix("kelola-statistik")->controller(KelolaStatistikController::class)->group(function () {
       Route::get('/', "kelolaStatistik");

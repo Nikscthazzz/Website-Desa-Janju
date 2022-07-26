@@ -97,14 +97,14 @@
             <div class="row">
 
               <div class="col-md-12">
-                <form action="#" method="post" enctype="multipart/form-data">
+                <form action="/dashboard/ubah-struktur-organisasi" method="post" enctype="multipart/form-data">
                   @csrf
                   <div class="input-group">
-                    <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="strukturPemerintahan" aria-label="Upload">
-                    <button class="btn btn-outline-secondary" type="button" id="strukturPemerintahan">Ubah</button>
+                    <input type="file" class="form-control" id="inputGroupFile04" name="gambar" aria-describedby="strukturPemerintahan" aria-label="Upload">
+                    <button class="btn btn-outline-secondary" type="submit" id="strukturPemerintahan">Ubah</button>
                   </div>
                 </form>
-                <img src="{{ asset("assets/img/struktur_pemerintahan.png") }}" class="img-fluid">
+                <img src="{{ asset("storage/struktur_organisasi/" . $struktur_organisasi) }}" class="img-fluid">
               </div>
 
             </div>
