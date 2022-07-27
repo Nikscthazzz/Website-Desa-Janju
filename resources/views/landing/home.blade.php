@@ -146,12 +146,12 @@
                                 <div class="col-md-6 col-12">
                                     {{-- <img class="testimonial__image border--round mb-3" alt="Image" src="{{ asset('storage/kabar_desa/kantor_desa.jpg') }}" /> --}}
                                     <img class="testimonial__image border--round mb-3" style="height: 300px; width: 100%; object-fit: cover" alt="Image" src="{{ asset('storage/kabar_desa/' . $kd->gambar) }}" /><br>
-                                    <a href="#" class="btn btn-primary border-0">Lihat Halaman <i class="fas fa-angle-right"></i></a>
+                                    <a href="/kabar-desa/{{ $kd->id }}" class="btn btn-primary border-0">Lihat Halaman <i class="fas fa-angle-right"></i></a>
                                 </div>
                                 <div class="col-lg-5 col-md-6">
                                     <h3 style="font-weight:700" class="mb-0">{{ $kd->judul }}</h3>
                                     <span class="text-primary d-inline-block my-3"><i class="fas fa-calendar-alt fa-lg"></i> {{ date_format($kd->created_at,"D, d-m-Y") }}</span>
-                                    <p>{{ substr($kd->isi, 0, 200) }}..... <br><a href="#"><span class="text-primary">Selengkapnya</span></a></p>
+                                    <p>{{ substr($kd->isi, 0, 200) }}..... <br><a href="/kabar-desa/{{ $kd->id }}"><span class="text-primary">Selengkapnya</span></a></p>
                                 </div>
                             </div>
                         </li>

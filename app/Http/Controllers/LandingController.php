@@ -49,4 +49,8 @@ class LandingController extends Controller
         $kabar_desa = KabarDesa::all();
         return view("landing.kabar-desa", compact("kabar_desa"));
     }
+    public function kabarDesaDetail(KabarDesa $kabar_desa)
+    {
+        return view("landing.detail-kabar-desa", compact("kabar_desa"));
+    }
 }

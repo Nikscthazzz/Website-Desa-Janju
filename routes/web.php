@@ -34,6 +34,7 @@ Route::get('/statistik-desa', [LandingController::class, "statistikDesa"]);
 Route::get('/apb-desa', [LandingController::class, "apbDesa"]);
 Route::get('/layanan-desa', [LandingController::class, "layananDesa"]);
 Route::get('/kabar-desa', [LandingController::class, "kabarDesa"]);
+Route::get('/kabar-desa/{kabar_desa}', [LandingController::class, "kabarDesaDetail"]);
 Route::get('/login', [AuthController::class, "login"])->name("login")->middleware("guest");
 Route::post('/login', [AuthController::class, "loginAuth"]);
 
