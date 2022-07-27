@@ -13,46 +13,18 @@
       </p>
 
       <div class="row">
+        @foreach ($layanan_desa as $ld)
         <div class="col-md-3">
-          <a href="#">
+          <a href="{{ $ld->tautan }}">
             <div class="card card-1 boxed boxed--sm boxed--border bg-primary">
               <div class="col-md-12 text-center text-light">
                 <i class="fas fa-file-alt" style="font-size: 3em"></i>
-                <h5 class="text-light">AWODOAKWDOK</h5>
+                <h5 class="text-light">{{ $ld->nama }}</h5>
               </div>
             </div>
           </a>
         </div>
-        <div class="col-md-3">
-          <a href="#">
-            <div class="card card-1 boxed boxed--sm boxed--border bg-primary">
-              <div class="col-md-12 text-center text-light">
-                <i class="fas fa-file-alt" style="font-size: 3em"></i>
-                <h5 class="text-light">AWODOAKWDOK</h5>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="#">
-            <div class="card card-1 boxed boxed--sm boxed--border bg-primary">
-              <div class="col-md-12 text-center text-light">
-                <i class="fas fa-file-alt" style="font-size: 3em"></i>
-                <h5 class="text-light">AWODOAKWDOK</h5>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3">
-          <a href="#">
-            <div class="card card-1 boxed boxed--sm boxed--border bg-primary">
-              <div class="col-md-12 text-center text-light">
-                <i class="fas fa-file-alt" style="font-size: 3em"></i>
-                <h5 class="text-light">AWODOAKWDOK</h5>
-              </div>
-            </div>
-          </a>
-        </div>
+        @endforeach
       </div>
 
     <!--end of container-->

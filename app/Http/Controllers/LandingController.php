@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\KabarDesa;
+use App\Models\LayananDesa;
 use App\Models\Masyarakat;
 use App\Models\Pengunjung;
 use App\Models\StrukturOrganisasi;
@@ -42,7 +43,8 @@ class LandingController extends Controller
     }
     public function layananDesa()
     {
-        return view("landing.layanan-desa");
+        $layanan_desa = LayananDesa::all();
+        return view("landing.layanan-desa", compact("layanan_desa"));
     }
     public function kabarDesa()
     {

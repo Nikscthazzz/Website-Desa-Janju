@@ -57,6 +57,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::prefix("kelola-layanan")->controller(KelolaLayananController::class)->group(function () {
       Route::get('/', "kelolaLayanan");
+      Route::post('/tambah', "kelolaLayananTambah");
+      Route::post('/edit/{layanan_desa}', "kelolaLayananEdit");
+      Route::delete('/delete/{layanan_desa}', "kelolaLayananDelete");
     });
 
     Route::prefix("kelola-surat-kabar")->controller(KelolaSuratKabarController::class)->group(function () {

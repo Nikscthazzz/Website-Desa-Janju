@@ -15,19 +15,19 @@
           <div class="card-body">
             <div class="row">
               <div class="col-md-12">
-                <form action="/dashboard/kelola-statistik/tambah" method="post" enctype="multipart/form-data">
+                <form action="/dashboard/kelola-layanan/tambah" method="post" enctype="multipart/form-data">
                   @csrf
                   <div class="row">
                     <div class="col-md-12">
                       <div class="mb-3">
                         <label class="form-label">Nama Layanan</label>
-                        <input type="text" name="" class="form-control" placeholder="Masukkan nama layanan">
+                        <input type="text" name="nama" class="form-control" placeholder="Masukkan nama layanan" required>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="mb-3">
                         <label class="form-label">Tautan Layanan</label>
-                        <input type="text" name="" class="form-control" placeholder="Masukkan tautan layanan">
+                        <input type="text" name="tautan" class="form-control" placeholder="Cth: https://your-url.com" required>
                       </div>
                     </div>
                   </div>
@@ -44,18 +44,11 @@
       <div class="col-12">
         <div class="card">
           <div class="card-header">
-            <h5 class="card-title">Daftar Data APBDesa Janju</h5>
+            <h5 class="card-title">Daftar Layanan Desa Janju</h5>
           </div>
           <div class="card-body">
             <div class="row mb-5">
               <div class="col-md-12">
-                <div class="mb-5 mt-0">
-                  <label class="form-label"><strong>Tahun</strong></label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Pilih Tahun</option>
-                  </select>
-                </div>
-                <h5><strong>Pendapatan Desa</strong></h5>
                 <table id="table1" class="table table-striped table-sm" style="width:100%">
                   <thead>
                     <tr>
@@ -66,21 +59,23 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach ($layanan_desa as $ld)
                     <tr>
-                      <td>1</td>
-                      <td>ajwdijawjid</td>
-                      <td>ajidajwdajoiw</td>
+                      <td>{{ $loop->iteration }}</td>
+                      <td>{{ $ld->nama }}</td>
+                      <td><a href="{{ $ld->tautan }}" target="_blank">{{ $ld->tautan }}</a></td>
                       <td>
                         <div class="d-flex">
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit-">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit-{{ $ld->id }}">
                             <i class="fa fa-pen-to-square"></i>
                           </button>
-                          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus-">
+                          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus-{{ $ld->id }}">
                             <i class="fa fa-trash-can"></i>
                           </button>
                         </div>
                       </td>
                     </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>
@@ -101,6 +96,67 @@
       </div>
     </div>
     @endif
+
+    @foreach ($layanan_desa as $ld)
+    <!-- Edit Modal -->
+    <div class="modal fade" id="edit-{{ $ld->id }}" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Data Layanan Desa Janju</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body m-3">
+            <form action="/dashboard/kelola-layanan/edit/{{ $ld->id }}" method="post" enctype="multipart/form-data">
+              @csrf
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <label class="form-label">Nama Layanan</label>
+                  <input type="text" name="nama" class="form-control" placeholder="Masukkan nama layanan" required value="{{ $ld->nama }}">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <label class="form-label">Tautan Layanan</label>
+                  <input type="text" name="tautan" class="form-control" placeholder="Cth: https://your-url.com" required value="{{ $ld->tautan }}">
+                </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            <button type="submit" class="btn btn-primary" required name="id" value="{{ $ld->id }}">Edit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Edit Modal -->
+
+    <!-- Hapus Modal -->
+    <div class="modal fade" id="hapus-{{ $ld->id }}" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hapus Data Layanan Desa Janju</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body m-3">
+            <p class="mb-0">Apakah anda yakin untuk menghapus data ini ?</p>
+            <h5><strong>{{ $ld->nama }}</strong></h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            <form action="/dashboard/kelola-layanan/delete/{{ $ld->id }}" method="post">
+              @csrf
+              @method("DELETE")
+              <button class="btn btn-danger">Hapus</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Hapus Modal -->
+    @endforeach
 
   </div>
 </main>
