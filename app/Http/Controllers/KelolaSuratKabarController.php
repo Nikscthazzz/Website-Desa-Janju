@@ -21,4 +21,21 @@ class KelolaSuratKabarController extends Controller
         KabarDesa::create($request->all());
         return back()->with("pesan", "Berhasil menambahkan kabar desa");
     }
+    public function kelolaSuratKabarEdit(KabarDesa $kabar_desa, Request $request)
+    {
+        $request["user_id"] = Auth::user()->id;
+        if ($request->gambar_file) {
+            $request->file("gambar_file")->storeAs("public/kabar_desa", $request->file("gambar_file")->getClientOriginalName());
+            $request["gambar"] = $request->file("gambar_file")->getClientOriginalName();
+        } else {
+            $request["gambar"] = $kabar_desa->gambar;
+        }
+        $kabar_desa->update($request->all());
+        return back()->with("pesan", "Berhasil mengubah kabar desa");
+    }
+    public function kelolaSuratKabarDelete(KabarDesa $kabar_desa)
+    {
+        $kabar_desa->delete();
+        return back()->with("pesan", "Berhasil menghapus kabar desa");
+    }
 }

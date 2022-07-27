@@ -21,19 +21,19 @@
                     <div class="col-md-12">
                       <div class="mb-3">
                         <label class="form-label">Judul</label>
-                        <input type="text" name="judul" class="form-control" placeholder="Masukkan judul">
+                        <input type="text" name="judul" class="form-control" placeholder="Masukkan judul" required>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="mb-3">
                         <label class="form-label">Isi</label>
-                        <textarea name="isi" cols="30" class="form-control" rows="10" placeholder="Masukkan isi"></textarea>
+                        <textarea name="isi" cols="30" class="form-control" rows="10" placeholder="Masukkan isi" required></textarea>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="mb-3">
                         <label class="form-label">Gambar</label>
-                        <input type="file" name="gambar_file" class="form-control" accept="image/*">
+                        <input type="file" name="gambar_file" class="form-control" accept="image/*" required>
                       </div>
                     </div>
                   </div>
@@ -55,13 +55,6 @@
           <div class="card-body">
             <div class="row mb-5">
               <div class="col-md-12">
-                <div class="mb-5 mt-0">
-                  <label class="form-label"><strong>Tahun</strong></label>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Pilih Tahun</option>
-                  </select>
-                </div>
-                <h5><strong>Pendapatan Desa</strong></h5>
                 <table id="table1" class="table table-striped table-sm" style="width:100%">
                   <thead>
                     <tr>
@@ -83,10 +76,10 @@
                       <td><img src="{{ asset('storage/kabar_desa/' . $kd->gambar) }}" alt="gambar" width="100" class="img"></td>
                       <td>
                         <div class="d-flex">
-                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit-">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit-{{ $kd->id }}">
                             <i class="fa fa-pen-to-square"></i>
                           </button>
-                          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus-">
+                          <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#hapus-{{ $kd->id }}">
                             <i class="fa fa-trash-can"></i>
                           </button>
                         </div>
@@ -113,6 +106,73 @@
       </div>
     </div>
     @endif
+
+    @foreach ($kabar_desa as $kd)
+    <!-- Edit Modal -->
+    <div class="modal fade" id="edit-{{ $kd->id }}" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Data Kabar Desa Janju</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body m-3">
+            <form action="/dashboard/kelola-surat-kabar/edit/{{ $kd->id }}" method="post" enctype="multipart/form-data">
+              @csrf
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <label class="form-label">Judul</label>
+                  <input type="text" name="judul" class="form-control" placeholder="Masukkan judul" required value="{{ $kd->judul }}">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <label class="form-label">Isi</label>
+                  <textarea name="isi" cols="30" class="form-control" rows="10" placeholder="Masukkan isi" required>{{ $kd->isi }}</textarea>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="mb-3">
+                  <label class="form-label">Gambar</label>
+                  <input type="file" name="gambar_file" class="form-control" accept="image/*">
+                </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            <button type="submit" class="btn btn-primary" required name="id" value="{{ $kd->id }}">Edit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Edit Modal -->
+
+    <!-- Hapus Modal -->
+    <div class="modal fade" id="hapus-{{ $kd->id }}" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hapus Data Kabar Desa Janju</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body m-3">
+            <p class="mb-0">Apakah anda yakin untuk menghapus data ini ?</p>
+            <h5><strong>{{ $kd->judul }}</strong></h5>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            <form action="/dashboard/kelola-surat-kabar/delete/{{ $kd->id }}" method="post">
+              @csrf
+              @method("DELETE")
+              <button class="btn btn-danger">Hapus</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Hapus Modal -->
+    @endforeach
 
   </div>
 </main>

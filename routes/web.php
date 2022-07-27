@@ -62,6 +62,8 @@ Route::middleware(['auth'])->group(function () {
     Route::prefix("kelola-surat-kabar")->controller(KelolaSuratKabarController::class)->group(function () {
       Route::get('/', "kelolaSuratKabar");
       Route::post('/tambah', "kelolaSuratKabarTambah");
+      Route::post('/edit/{kabar_desa}', "kelolaSuratKabarEdit");
+      Route::delete('/delete/{kabar_desa}', "kelolaSuratKabarDelete");
     });
   });
 
