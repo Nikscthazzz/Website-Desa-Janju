@@ -23,7 +23,7 @@ class LandingController extends Controller
         $data["mas_lk"] = Masyarakat::where("jenis_kelamin", "LAKI-LAKI")->count();
         $data["mas_pr"] = Masyarakat::where("jenis_kelamin", "PEREMPUAN")->count();
 
-        $data["kabar_desa"] = KabarDesa::take(3);
+        $data["kabar_desa"] = KabarDesa::take(3)->get();
 
         return view('landing.home', $data);
     }
@@ -46,6 +46,7 @@ class LandingController extends Controller
     }
     public function kabarDesa()
     {
-        return view("landing.kabar-desa");
+        $kabar_desa = KabarDesa::all();
+        return view("landing.kabar-desa", compact("kabar_desa"));
     }
 }

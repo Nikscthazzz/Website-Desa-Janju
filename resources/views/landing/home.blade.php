@@ -144,13 +144,14 @@
                         <li>
                             <div class="testimonial row justify-content-center">
                                 <div class="col-md-6 col-12">
-                                    <img class="testimonial__image border--round mb-3" alt="Image" src="{{ asset('assets/img/kantor_desa.jpg') }}" />
+                                    {{-- <img class="testimonial__image border--round mb-3" alt="Image" src="{{ asset('storage/kabar_desa/kantor_desa.jpg') }}" /> --}}
+                                    <img class="testimonial__image border--round mb-3" style="height: 300px; width: 100%; object-fit: cover" alt="Image" src="{{ asset('storage/kabar_desa/' . $kd->gambar) }}" /><br>
                                     <a href="#" class="btn btn-primary border-0">Lihat Halaman <i class="fas fa-angle-right"></i></a>
                                 </div>
                                 <div class="col-lg-5 col-md-6">
-                                    <h3 style="font-weight:700" class="mb-0">Title</h3>
-                                    <span class="text-primary d-inline-block my-3"><i class="fas fa-calendar-alt fa-lg"></i> Jum'at, 22 September 2022</span>
-                                    <p>Desa Janju merupakan salah satu Desa yang ada di Kecamatan Tanah Grogot Kabupaten Paser Kalimantan Timur yang terbagi menjadi 8 Rukun Tetangga (RT). Jarak tempuh dari Ibukota Kecamatan dan Ibukota Kabupaten  + 10 KM terletak pada ketinggian ..... <a href="#"><span class="text-primary">Selengkapnya</span></a></p>
+                                    <h3 style="font-weight:700" class="mb-0">{{ $kd->judul }}</h3>
+                                    <span class="text-primary d-inline-block my-3"><i class="fas fa-calendar-alt fa-lg"></i> {{ date_format($kd->created_at,"D, d-m-Y") }}</span>
+                                    <p>{{ substr($kd->isi, 0, 200) }}..... <br><a href="#"><span class="text-primary">Selengkapnya</span></a></p>
                                 </div>
                             </div>
                         </li>

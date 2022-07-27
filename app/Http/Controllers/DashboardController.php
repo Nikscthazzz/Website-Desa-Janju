@@ -17,7 +17,7 @@ class DashboardController extends Controller
         $data["struktur_organisasi"] = StrukturOrganisasi::latest()->pluck("gambar")[0];
 
         $tanggal = date("Y-m-d");
-        $tanggalKemarin =  date('d-m-Y', strtotime("-1 days"));
+        $tanggalKemarin =  date('Y-m-d', strtotime("-1 days"));
         $bulanKemarin =  date('m', strtotime("-1 months"));
         $data["grafik"] = [
             "hari" => [
