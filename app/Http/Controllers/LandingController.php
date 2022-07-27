@@ -8,6 +8,7 @@ use App\Models\Masyarakat;
 use App\Models\Pengunjung;
 use App\Models\StrukturOrganisasi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class LandingController extends Controller
 {
@@ -35,7 +36,18 @@ class LandingController extends Controller
     }
     public function statistikDesa()
     {
-        return view('landing.statistik-desa');
+        $data = $this->getDataMasyarakat();
+        $total = [];
+        foreach ($data as $key => $value) {
+            foreach ($value as $vl) {
+                $total[$key][] = Masyarakat::where($key, $vl)->get()->count();
+            }
+            if ($key == "pekerjaan") {
+                $total[$key][] = Masyarakat::whereNotIn("pekerjaan", $data["pekerjaan"])->get()->count();
+                $data["pekerjaan"][] = "LAINNYA";
+            }
+        }
+        return view('landing.statistik-desa', compact("data", "total"));
     }
     public function apbDesa()
     {
@@ -54,5 +66,31 @@ class LandingController extends Controller
     public function kabarDesaDetail(KabarDesa $kabar_desa)
     {
         return view("landing.detail-kabar-desa", compact("kabar_desa"));
+    }
+
+    private function getDataMasyarakat()
+    {
+        $data = [];
+
+        $data["jenis_kelamin"] = [
+            "LAKI-LAKI", "PEREMPUAN"
+        ];
+        $data["agama"] = [
+            "ISLAM", "PROTESTAN", "KATOLIK", "HINDU", "BUDHA", "KONGHUCU", "LAINNYA"
+        ];
+        $data["pendidikan"] = [
+            "SD", "SMP", "SMA", "DIPLOMA", "SARJANA", "LAINNYA"
+        ];
+        $data["pekerjaan"] = [
+            "PENGURUS RUMAH TANGGA", "PELAJAR/MAHASISWA", "PNS/ASN", "KARYAWAN SWASTA", "PEDAGANG", "PETANI"
+        ];
+        $data["status_pernikahan"] = [
+            "BELUM KAWIN", "KAWIN", "CERAI HIDUP", "CERAI MATI"
+        ];
+        $data["kewarganegaraan"] = [
+            "WNI", "WNA"
+        ];
+
+        return $data;
     }
 }
