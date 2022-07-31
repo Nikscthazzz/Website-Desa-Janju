@@ -101,9 +101,19 @@
                         </div>
                       </div>
                       <button class="btn btn-primary">Tambah</button>
+                    </form>
+                    <h5 class="text-center mt-3 text-secondary">- atau -</h5>
+                    <form action="/dashboard/kelola-statistik/upload-csv" method="POST" enctype="multipart/form-data">
+                      @csrf
+                      <label for="uploaded_file" class="form-label">Import dari csv</label>
+                      <div class="input-group">
+                        <input type="file" class="form-control" id="uploaded_file" name="uploaded_file" accept=".csv">
+                        <button class="btn btn-primary" type="submit">Upload</button>
+                      </div>
+                      <small class="text-primary">pilih file dengan format csv</small>
+                    </form>
                     </div>
                   </div>
-                </form>
               </div>
             </div>
           </div>
@@ -198,7 +208,7 @@
                     <div class="mb-3">
                       <label for="jk" class="form-label">Jenis Kelamin</label>
                       <select class="form-select" id="jk" aria-label="Default select example" required name="jenis_kelamin">
-                        <option>Pilih Jenis Kelamin</option>
+                        <option disabled>Pilih Jenis Kelamin</option>
                         @foreach ($data["jenis_kelamin"] as $jk)
                           <option value="{{ $jk }}" @if($msy->jenis_kelamin===$jk) selected @endif>{{ $jk }}</option>
                         @endforeach
@@ -209,7 +219,7 @@
                     <div class="mb-3">
                       <label for="agama" class="form-label">Agama</label>
                       <select class="form-select" id="agama" aria-label="Default select example" required name="agama">
-                        <option>Pilih Agama</option>
+                        <option disabled>Pilih Agama</option>
                         @foreach ($data["agama"] as $agama)
                           <option value="{{ $agama }}" @if($msy->agama===$agama) selected @endif>{{ $agama }}</option>
                         @endforeach
@@ -220,7 +230,7 @@
                     <div class="mb-3">
                       <label for="pendidikan" class="form-label">Pendidikan</label>
                       <select class="form-select" aria-label="Default select example" required name="pendidikan">
-                        <option>Pilih Pendidikan</option>
+                        <option disabled>Pilih Pendidikan</option>
                         @foreach ($data["pendidikan"] as $pendidikan)
                           <option value="{{ $pendidikan }}" @if($msy->pendidikan===$pendidikan) selected @endif>{{ $pendidikan }}</option>
                         @endforeach
@@ -245,7 +255,7 @@
                     <div class="mb-3">
                       <label for="status_pernikahan" class="form-label">Status Pernikahan</label>
                       <select class="form-select" id="status_pernikahan" aria-label="Default select example" required name="status_pernikahan">
-                        <option>Pilih Status Pernikahan</option>
+                        <option disabled>Pilih Status Pernikahan</option>
                         @foreach ($data["status_pernikahan"] as $status_pernikahan)
                           <option value="{{ $status_pernikahan }}" @if($msy->status_pernikahan===$status_pernikahan) selected @endif>{{ $status_pernikahan }}</option>
                         @endforeach
@@ -256,7 +266,7 @@
                     <div class="mb-3">
                       <label for="kewarganegaraan" class="form-label">Kewarganegaraan</label>
                       <select class="form-select" id="kewarganegaraan" aria-label="Default select example" required name="kewarganegaraan">
-                        <option>Pilih Kewarganegaraan</option>
+                        <option disabled>Pilih Kewarganegaraan</option>
                         @foreach ($data["kewarganegaraan"] as $kewarganegaraan)
                           <option value="{{ $kewarganegaraan }}" @if($msy->kewarganegaraan===$kewarganegaraan) selected @endif>{{ $kewarganegaraan }}</option>
                         @endforeach

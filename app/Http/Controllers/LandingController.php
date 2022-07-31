@@ -14,8 +14,6 @@ class LandingController extends Controller
 {
     public function home()
     {
-        // $data = Pengunjung::first();
-        // return date("Y", strtotime($data->tanggal));
         Pengunjung::create([
             "tanggal" => date("Y-m-d")
         ]);
