@@ -126,6 +126,10 @@
         <div class="card">
           <div class="card-header">
             <h5 class="card-title">Daftar Data Masyarakat Desa Janju</h5>
+            <span data-href="/dashboard/kelola-statistik/export-csv" id="export" class="btn btn-success btn-sm" onclick="exportTasks(event.target);">
+              <i class="fas fa-file-export"></i>
+              Export Menjadi CSV
+            </span>
           </div>
           <div class="card-body">
             <table id="datatables-reponsive" class="table table-striped table-sm" style="width:100%">
@@ -316,4 +320,12 @@
   </div>
 </main>
 
+@endsection
+@section("script")
+<script>
+   function exportTasks(_this) {
+      let _url = $(_this).data('href');
+      window.location.href = _url;
+   }
+</script>
 @endsection

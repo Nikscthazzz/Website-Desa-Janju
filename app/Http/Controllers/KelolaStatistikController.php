@@ -87,6 +87,46 @@ class KelolaStatistikController extends Controller
             throw new \Exception('No file was uploaded', Response::HTTP_BAD_REQUEST);
         }
     }
+
+    public function kelolaStatistikExportCsv()
+    {
+        $tanggal = date("Y_m_d_H:i:s");
+        $fileName = "masyarakat_desa_janju_$tanggal.csv";
+        $masyarakat = Masyarakat::all();
+
+        $headers = array(
+            "Content-type"        => "text/csv",
+            "Content-Disposition" => "attachment; filename=$fileName",
+            "Pragma"              => "no-cache",
+            "Cache-Control"       => "must-revalidate, post-check=0, pre-check=0",
+            "Expires"             => "0"
+        );
+
+        $columns = array('NIK', 'Nama Lengkap', 'Jenis Kelamin', 'Agama', 'Pendidikan', 'Pekerjaan', 'Status Pernikahan', 'Kewarganegaraan');
+
+        $callback = function () use ($masyarakat, $columns) {
+            $file = fopen('php://output', 'w');
+            fputcsv($file, $columns);
+
+            foreach ($masyarakat as $msy) {
+                $row['NIK']  = $msy->nik;
+                $row['Nama Lengkap']    = $msy->nama_lengkap;
+                $row['Jenis Kelamin']    = $msy->jenis_kelamin;
+                $row['Agama']  = $msy->agama;
+                $row['Pendidikan']  = $msy->pendidikan;
+                $row['Pekerjaan']  = $msy->pekerjaan;
+                $row['Status Pernikahan']  = $msy->status_pernikahan;
+                $row['Kewarganegaraan']  = $msy->kewarganegaraan;
+
+                fputcsv($file, array($row['NIK'], $row['Nama Lengkap'], $row['Jenis Kelamin'], $row['Agama'], $row['Pendidikan'], $row['Pekerjaan'], $row['Status Pernikahan'], $row['Kewarganegaraan']));
+            }
+
+            fclose($file);
+        };
+
+        return response()->stream($callback, 200, $headers);
+    }
+
     public function kelolaStatistikEdit(Masyarakat $masyarakat, Request $request)
     {
         $masyarakat->update($request->all());

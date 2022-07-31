@@ -47,6 +47,7 @@ Route::middleware(['auth'])->group(function () {
     Route::prefix("kelola-statistik")->controller(KelolaStatistikController::class)->group(function () {
       Route::get('/', "kelolaStatistik");
       Route::post('/tambah', "kelolaStatistikTambah");
+      Route::get('/export-csv', "kelolaStatistikExportCsv");
       Route::post('/upload-csv', "kelolaStatistikUploadCsv");
       Route::post('/edit/{masyarakat}', "kelolaStatistikEdit");
       Route::delete('/delete/{masyarakat}', "kelolaStatistikDelete");
