@@ -13,12 +13,12 @@
       </p>
 
       <div class="row">
-        <div class="col-md-6 mb-3">
+        <div class="col-md-4 mb-3">
           <div class="card card-1 boxed boxed--sm boxed--border bg-light">
             <div class="card-head">
-              <h3 class="card-title text-dark">
-                Data Agama
-              </h3>
+              <h4 class="card-title text-dark mb-1">
+                <strong>Data Agama</strong>
+              </h4>
             </div>
             <div class="card-body">
               <div class="card card-1 boxed boxed--sm boxed--border bg-light">
@@ -29,12 +29,12 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 mb-3">
+        <div class="col-md-4 mb-3">
           <div class="card card-1 boxed boxed--sm boxed--border bg-light">
             <div class="card-head">
-              <h3 class="card-title text-dark">
-                Data Jenis Kelamin
-              </h3>
+              <h4 class="card-title text-dark mb-1">
+                <strong>Data Jenis Kelamin</strong>
+              </h4>
             </div>
             <div class="card-body">
               <div class="card card-1 boxed boxed--sm boxed--border bg-light">
@@ -45,12 +45,12 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 mb-3">
+        <div class="col-md-4 mb-3">
           <div class="card card-1 boxed boxed--sm boxed--border bg-light">
             <div class="card-head">
-              <h3 class="card-title text-dark">
-                Data Pendidikan
-              </h3>
+              <h4 class="card-title text-dark mb-1">
+                <strong>Data Pendidikan</strong>
+              </h4>
             </div>
             <div class="card-body">
               <div class="card card-1 boxed boxed--sm boxed--border bg-light">
@@ -61,12 +61,12 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 mb-3">
+        <div class="col-md-4 mb-3">
           <div class="card card-1 boxed boxed--sm boxed--border bg-light">
             <div class="card-head">
-              <h3 class="card-title text-dark">
-                Data Status Pernikahan
-              </h3>
+              <h4 class="card-title text-dark mb-1">
+                <strong>Data Status Pernikahan</strong>
+              </h4>
             </div>
             <div class="card-body">
               <div class="card card-1 boxed boxed--sm boxed--border bg-light">
@@ -77,12 +77,12 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 mb-3">
+        <div class="col-md-4 mb-3">
           <div class="card card-1 boxed boxed--sm boxed--border bg-light">
             <div class="card-head">
-              <h3 class="card-title text-dark">
-                Data Pekerjaan
-              </h3>
+              <h4 class="card-title text-dark mb-1">
+                <strong>Data Pekerjaan</strong>
+              </h4>
             </div>
             <div class="card-body">
               <div class="card card-1 boxed boxed--sm boxed--border bg-light">
@@ -93,12 +93,12 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 mb-3">
+        <div class="col-md-4 mb-3">
           <div class="card card-1 boxed boxed--sm boxed--border bg-light">
             <div class="card-head">
-              <h3 class="card-title text-dark">
-                Data Kewarganegaraan
-              </h3>
+              <h4 class="card-title text-dark mb-1">
+                <strong>Data Kewarganegaraan</strong>
+              </h4>
             </div>
             <div class="card-body">
               <div class="card card-1 boxed boxed--sm boxed--border bg-light">
@@ -118,6 +118,8 @@
 @endsection
 @section("script")
 <script>
+  Chart.overrides["pie"].plugins.legend.position = 'bottom';
+  Chart.overrides["pie"].plugins.legend.display = false;
   // /////////////////////////////////////////////////////////////////////////////////////////
   const data_agama = {
     labels: @json($data["agama"]),
