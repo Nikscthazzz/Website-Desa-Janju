@@ -55,6 +55,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::prefix("kelola-apbdes")->controller(KelolaApbdesController::class)->group(function () {
       Route::get('/', "kelolaApbdes");
+      Route::post('/data', "kelolaApbdesData");
+      Route::post('/tambah', "kelolaApbdesTambah");
     });
 
     Route::prefix("kelola-layanan")->controller(KelolaLayananController::class)->group(function () {

@@ -15,21 +15,43 @@
           <div class="card-body">
             <div class="row">
               <div class="col-md-12">
-                <form action="/dashboard/kelola-statistik/tambah" method="post">
+                <form action="/dashboard/kelola-apbdes/tambah" method="post">
                   @csrf
                   <div class="row">
                     <div class="col-md-3">
                       <div class="mb-3">
                         <label class="form-label">Tahun</label>
-                        <input type="number" min="1000" name="" class="form-control" placeholder="Masukkan Tahun">
+                        <input type="number" min="1000" name="tahun" class="form-control" placeholder="Masukkan Tahun" required>
                       </div>
                     </div>
                     <div class="col-md-9">
                       <div class="mb-3">
                         <label class="form-label">Jenis APBDesa Janju</label>
-                        <select class="form-select" aria-label="Default select example">
-                          <option selected>Pilih Jenis APBDes Janju</option>
+                        <select class="form-select" aria-label="Default select example" id="slc_jenis" name="jenis" required>
+                          <option selected>Pendapatan Desa</option>
+                          <option>Pembelanjaan Desa</option>
+                          <option>Pelaksanaan Desa</option>
                         </select>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="mb-3">
+                        <label class="form-label" id="lbl_nama">Nama Pendapatan Desa</label>
+                        <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama Pendapatan Desa" id="inp_nama" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Anggaran</label>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Rp.</span>
+                        <input type="number" class="form-control" placeholder="Masukkan Anggaran" name="anggaran" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Realisasi</label>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Rp.</span>
+                        <input type="number" class="form-control" placeholder="Masukkan Realisasi" name="realisasi" required>
                       </div>
                     </div>
                   </div>
@@ -53,12 +75,17 @@
               <div class="col-md-12">
                 <div class="mb-5 mt-0">
                   <label class="form-label"><strong>Tahun</strong></label>
-                  <select class="form-select" aria-label="Default select example">
+                  <select class="form-select" aria-label="Default select example" id="slc_tahun">
                     <option selected>Pilih Tahun</option>
+                    @foreach ($tahun as $th)
+                      <option>{{ $th->tahun }}</option>
+                    @endforeach
                   </select>
                 </div>
-                <h5><strong>Pendapatan Desa</strong></h5>
-                <table id="table1" class="table table-striped table-sm" style="width:100%">
+                <div id="data_apbdes">
+                @foreach ($data as $key => $value)
+                <h5><strong>{{ $key }}</strong></h5>
+                <table class="table table-striped table-sm mb-3" style="width:100%">
                   <thead>
                     <tr>
                       <th>Uraian</th>
@@ -68,10 +95,11 @@
                     </tr>
                   </thead>
                   <tbody>
+                    @foreach ($value["data"] as $dt)
                     <tr>
-                      <td>Hasil Usaha Desa</td>
-                      <td>Rp. 123131321</td>
-                      <td>Rp. 4719738123981</td>
+                      <td>{{ $dt->nama }}</td>
+                      <td>Rp. {{ number_format($dt->anggaran,2,',','.') }}</td>
+                      <td>Rp. {{ number_format($dt->realisasi,2,',','.') }}</td>
                       <td>
                         <div class="d-flex">
                           <button type="button" class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#edit-">
@@ -83,134 +111,17 @@
                         </div>
                       </td>
                     </tr>
-                    <tr>
-                      <td>Dana Desa</td>
-                      <td>Rp. 123131321</td>
-                      <td>Rp. 4719738123981</td>
-                      <td>
-                        <div class="d-flex">
-                          <button type="button" class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#edit-">
-                            <i class="fa fa-pen-to-square"></i>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#hapus-">
-                            <i class="fa fa-trash-can"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
+                    @endforeach
                     <tr>
                       <td><strong>Total</strong></td>
-                      <td><strong>Rp. 123131321</strong></td>
-                      <td colspan="2"><strong>Rp. 4719738123981</strong></td>
+                      <td><strong>Rp. {{ number_format($value["total"]["anggaran"],2,',','.') }}</strong></td>
+                      <td colspan="2"><strong>Rp. {{ number_format($value["total"]["realisasi"],2,',','.') }}</strong></td>
                     </tr>
                   </tbody>
                 </table>
-              </div>
-            </div>
+                @endforeach
+                </div>
 
-            <div class="row mb-5">
-              <div class="col-md-12">
-                <h5><strong>Pembelanjaan Desa</strong></h5>
-                <table id="table2" class="table table-striped table-sm" style="width:100%">
-                  <thead>
-                    <tr>
-                      <th>Uraian</th>
-                      <th>Anggaran</th>
-                      <th>Realisasi</th>
-                      <th>Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Hasil Usaha Desa</td>
-                      <td>Rp. 123131321</td>
-                      <td>Rp. 4719738123981</td>
-                      <td>
-                        <div class="d-flex">
-                          <button type="button" class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#edit-">
-                            <i class="fa fa-pen-to-square"></i>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#hapus-">
-                            <i class="fa fa-trash-can"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Dana Desa</td>
-                      <td>Rp. 123131321</td>
-                      <td>Rp. 4719738123981</td>
-                      <td>
-                        <div class="d-flex">
-                          <button type="button" class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#edit-">
-                            <i class="fa fa-pen-to-square"></i>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#hapus-">
-                            <i class="fa fa-trash-can"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><strong>Total</strong></td>
-                      <td><strong>Rp. 123131321</strong></td>
-                      <td colspan="2"><strong>Rp. 4719738123981</strong></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            
-            <div class="row mb-5">
-              <div class="col-md-12">
-                <h5><strong>Pelaksanaan Desa</strong></h5>
-                <table id="table3" class="table table-striped table-sm" style="width:100%">
-                  <thead>
-                    <tr>
-                      <th>Uraian</th>
-                      <th>Anggaran</th>
-                      <th>Realisasi</th>
-                      <th>Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Hasil Usaha Desa</td>
-                      <td>Rp. 123131321</td>
-                      <td>Rp. 4719738123981</td>
-                      <td>
-                        <div class="d-flex">
-                          <button type="button" class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#edit-">
-                            <i class="fa fa-pen-to-square"></i>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#hapus-">
-                            <i class="fa fa-trash-can"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Dana Desa</td>
-                      <td>Rp. 123131321</td>
-                      <td>Rp. 4719738123981</td>
-                      <td>
-                        <div class="d-flex">
-                          <button type="button" class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#edit-">
-                            <i class="fa fa-pen-to-square"></i>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#hapus-">
-                            <i class="fa fa-trash-can"></i>
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><strong>Total</strong></td>
-                      <td><strong>Rp. 123131321</strong></td>
-                      <td colspan="2"><strong>Rp. 4719738123981</strong></td>
-                    </tr>
-                  </tbody>
-                </table>
               </div>
             </div>
 
@@ -236,6 +147,55 @@
       });
       $('#table3').DataTable({
       });
-  } );
+  });
+</script>
+
+<script>
+  const slc_jenis = document.getElementById("slc_jenis");
+  const lbl_nama = document.getElementById("lbl_nama");
+  const inp_nama = document.getElementById("inp_nama");
+
+  slc_jenis.addEventListener("change", function(){
+    var value = slc_jenis.value;
+    var text = slc_jenis.options[slc_jenis.selectedIndex].text;
+    lbl_nama.innerHTML = "Nama " + text;
+    inp_nama.placeholder = "Masukkan Nama " + text;
+  })
+</script>
+
+<script>
+  const slc_tahun = document.getElementById("slc_tahun");
+  const data_apbdes = document.getElementById("data_apbdes");
+  slc_tahun.addEventListener("change", function(){
+    data_apbdes.innerHTML = `
+    <div class="text-center">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    `;
+
+    var value = slc_tahun.value;
+    var text = slc_tahun.options[slc_tahun.selectedIndex].text;
+
+    var data = { tahun: text }
+
+    fetch('{{ url("/dashboard/kelola-apbdes/data") }}', {
+      method: 'POST', 
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+      },
+      body: JSON.stringify(data),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        data_apbdes.innerHTML = data;
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
+  })
 </script>
 @endsection
