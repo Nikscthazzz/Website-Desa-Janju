@@ -32,6 +32,7 @@ Route::get('/', [LandingController::class, "home"]);
 Route::get('/profil-desa', [LandingController::class, "profilDesa"]);
 Route::get('/statistik-desa', [LandingController::class, "statistikDesa"]);
 Route::get('/apb-desa', [LandingController::class, "apbDesa"]);
+Route::post('/apb-desa/data', [LandingController::class, "apbDesaData"]);
 Route::get('/layanan-desa', [LandingController::class, "layananDesa"]);
 Route::get('/kabar-desa', [LandingController::class, "kabarDesa"]);
 Route::get('/kabar-desa/{kabar_desa}', [LandingController::class, "kabarDesaDetail"]);

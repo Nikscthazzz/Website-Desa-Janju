@@ -13,27 +13,20 @@
       </p>
 
       <div class="dropdown mb-5 text-light" style="display: inline-block">
-        <span class="dropdown__trigger bg-primary" style="padding: 8px 24px; border-radius: 24px">Pilih Tahun
+        <span class="dropdown__trigger bg-primary" style="padding: 8px 24px; border-radius: 24px" id="lbl_tahun">Pilih Tahun
             <i class="stack-down-open"></i>
         </span>
         <div class="dropdown__container">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-lg-2 dropdown__content">
-                        <h5>Select an option</h5>
+                        <h5 class="my-0">Pilih Tahun</h5>
                         <ul class="menu-vertical">
+                          @foreach ($tahun as $thn)
                             <li>
-                                <a href="#">Create</a>
+                                <a href="#{{ $thn->tahun }}" class="tahun_value">{{ $thn->tahun }}</a>
                             </li>
-                            <li>
-                                <a href="#">Manage</a>
-                            </li>
-                            <li>
-                                <a href="#">Share</a>
-                            </li>
-                            <li>
-                                <a href="#">Logout</a>
-                            </li>
+                          @endforeach
                         </ul>
                     </div>
                 </div>
@@ -46,75 +39,35 @@
 
     <div class="row mb-3">
       <div class="col-12">
-        <h5 class="m-1">Hallo world</h5>
-        <table id="table1" class="display">
-          <thead>
-              <tr>
-                  <th>Column 1</th>
-                  <th>Column 2</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>Row 1 Data 1</td>
-                  <td>Row 1 Data 2</td>
-              </tr>
-              <tr>
-                  <td>Row 2 Data 1</td>
-                  <td>Row 2 Data 2</td>
-              </tr>
-          </tbody>
-        </table>
 
-      </div>
-    </div>
-
-    <div class="row mb-3">
-      <div class="col-12">
-        <h5 class="m-1">Hallo world</h5>
-        <table id="table2" class="display">
-          <thead>
+        <div id="data_apbdes">
+          @foreach ($data as $key => $value)
+          <h5><strong>{{ $key }}</strong></h5>
+          <table class="table table-striped table-sm mb-3" style="width:100%">
+            <thead>
               <tr>
-                  <th>Column 1</th>
-                  <th>Column 2</th>
+                <th>Uraian</th>
+                <th>Anggaran</th>
+                <th>Realisasi</th>
               </tr>
-          </thead>
-          <tbody>
+            </thead>
+            <tbody>
+              @foreach ($value["data"] as $dt)
               <tr>
-                  <td>Row 1 Data 1</td>
-                  <td>Row 1 Data 2</td>
+                <td>{{ $dt->nama }}</td>
+                <td>Rp. {{ number_format($dt->anggaran,2,',','.') }}</td>
+                <td>Rp. {{ number_format($dt->realisasi,2,',','.') }}</td>
               </tr>
+              @endforeach
               <tr>
-                  <td>Row 2 Data 1</td>
-                  <td>Row 2 Data 2</td>
+                <td><strong>Total</strong></td>
+                <td><strong>Rp. {{ number_format($value["total"]["anggaran"],2,',','.') }}</strong></td>
+                <td><strong>Rp. {{ number_format($value["total"]["realisasi"],2,',','.') }}</strong></td>
               </tr>
-          </tbody>
-        </table>
-
-      </div>
-    </div>
-
-    <div class="row mb-3">
-      <div class="col-12">
-        <h5 class="m-1">Hallo world</h5>
-        <table id="table2" class="display">
-          <thead>
-              <tr>
-                  <th>Column 1</th>
-                  <th>Column 2</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>Row 1 Data 1</td>
-                  <td>Row 1 Data 2</td>
-              </tr>
-              <tr>
-                  <td>Row 2 Data 1</td>
-                  <td>Row 2 Data 2</td>
-              </tr>
-          </tbody>
-        </table>
+            </tbody>
+          </table>
+          @endforeach
+          </div>
 
       </div>
     </div>
@@ -141,5 +94,49 @@
         paging: false
       });
   } );
+</script>
+
+<script>
+  const tahun_value = document.getElementsByClassName("tahun_value");
+  const data_apbdes = document.getElementById("data_apbdes");
+  const lbl_tahun = document.getElementById("lbl_tahun");
+
+  for (let i = 0; i < tahun_value.length; i++) {
+    tahun_value[i].addEventListener("click", function(){
+      data_apbdes.innerHTML = `
+        <div class="text-center">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      `;
+      lbl_tahun.innerHTML = "Data Tahun " + tahun_value[i].href.split("#")[1] + "<i class='stack-down-open'></i>";
+
+      let data = {tahun: tahun_value[i].href.split("#")[1]}
+
+      fetch('{{ url("/apb-desa/data") }}', {
+      method: 'POST', 
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+      },
+      body: JSON.stringify(data),
+      })
+      .then((response) => response.json())
+      .then((data) => {
+          data_apbdes.innerHTML = data;
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+
+    })
+    
+  }
+  // tahun_value.forEach(thn => {
+  //   thn.addEventListener("click", function(){
+  //     alert(thn.href.split("#")[1])
+  //   })
+  // });
 </script>
 @endsection

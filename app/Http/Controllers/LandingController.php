@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Apbdes;
 use App\Models\KabarDesa;
 use App\Models\LayananDesa;
 use App\Models\Masyarakat;
@@ -49,7 +50,96 @@ class LandingController extends Controller
     }
     public function apbDesa()
     {
-        return view('landing.apb-desa');
+        $data = [];
+        $data["Pendapatan Desa"] = [
+            "data" => Apbdes::where("jenis", "Pendapatan Desa")->get(),
+            "total" => [
+                "anggaran" => Apbdes::select('anggaran')->where("jenis", "Pendapatan Desa")->sum('anggaran'),
+                "realisasi" => Apbdes::select('realisasi')->where("jenis", "Pendapatan Desa")->sum('realisasi'),
+            ]
+        ];
+
+        $data["Pembelanjaan Desa"] = [
+            "data" => Apbdes::where("jenis", "Pembelanjaan Desa")->get(),
+            "total" => [
+                "anggaran" => Apbdes::select('anggaran')->where("jenis", "Pembelanjaan Desa")->sum('anggaran'),
+                "realisasi" => Apbdes::select('realisasi')->where("jenis", "Pembelanjaan Desa")->sum('realisasi'),
+            ]
+        ];
+
+        $data["Pelaksanaan Desa"] = [
+            "data" => Apbdes::where("jenis", "Pelaksanaan Desa")->get(),
+            "total" => [
+                "anggaran" => Apbdes::select('anggaran')->where("jenis", "Pelaksanaan Desa")->sum('anggaran'),
+                "realisasi" => Apbdes::select('realisasi')->where("jenis", "Pelaksanaan Desa")->sum('realisasi'),
+            ]
+        ];
+        $tahun = Apbdes::select("tahun")->groupBy("tahun")->get();
+        return view('landing.apb-desa', compact("data", "tahun"));
+    }
+    public function apbDesaData(Request $request)
+    {
+        $data = [];
+        $data["Pendapatan Desa"] = [
+            "data" => Apbdes::where("jenis", "Pendapatan Desa")->where("tahun", $request->tahun)->get(),
+            "total" => [
+                "anggaran" => Apbdes::select('anggaran')->where("jenis", "Pendapatan Desa")->where("tahun", $request->tahun)->sum('anggaran'),
+                "realisasi" => Apbdes::select('realisasi')->where("jenis", "Pendapatan Desa")->where("tahun", $request->tahun)->sum('realisasi'),
+            ]
+        ];
+
+        $data["Pembelanjaan Desa"] = [
+            "data" => Apbdes::where("jenis", "Pembelanjaan Desa")->where("tahun", $request->tahun)->get(),
+            "total" => [
+                "anggaran" => Apbdes::select('anggaran')->where("jenis", "Pembelanjaan Desa")->where("tahun", $request->tahun)->sum('anggaran'),
+                "realisasi" => Apbdes::select('realisasi')->where("jenis", "Pembelanjaan Desa")->where("tahun", $request->tahun)->sum('realisasi'),
+            ]
+        ];
+
+        $data["Pelaksanaan Desa"] = [
+            "data" => Apbdes::where("jenis", "Pelaksanaan Desa")->where("tahun", $request->tahun)->get(),
+            "total" => [
+                "anggaran" => Apbdes::select('anggaran')->where("jenis", "Pelaksanaan Desa")->where("tahun", $request->tahun)->sum('anggaran'),
+                "realisasi" => Apbdes::select('realisasi')->where("jenis", "Pelaksanaan Desa")->where("tahun", $request->tahun)->sum('realisasi'),
+            ]
+        ];
+
+        $html = "";
+        foreach ($data as $key => $value) {
+            $html .= "
+            <h5><strong>$key</strong></h5>
+            <table class='table table-striped table-sm mb-3' style='width:100%'>
+                <thead>
+                <tr>
+                    <th>Uraian</th>
+                    <th>Anggaran</th>
+                    <th>Realisasi</th>
+                </tr>
+                </thead>
+                <tbody>
+            ";
+
+            foreach ($value["data"] as $dt) {
+                $html .= "
+                <tr>
+                    <td>$dt->nama</td>
+                    <td>Rp. $dt->anggaran</td>
+                    <td>Rp. $dt->realisasi</td>
+                </tr>
+                ";
+            }
+
+            $html .= "
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td><strong>Rp. " . $value['total']['anggaran'] . "</strong></td>
+                        <td colspan='2'><strong>Rp. " . $value['total']['realisasi'] . "</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            ";
+        }
+        return response()->json($html);
     }
     public function layananDesa()
     {
