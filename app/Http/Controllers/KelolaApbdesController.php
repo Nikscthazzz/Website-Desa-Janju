@@ -90,10 +90,10 @@ class KelolaApbdesController extends Controller
                     <td>Rp. $dt->realisasi</td>
                     <td>
                     <div class='d-flex'>
-                        <button type='button' class='btn btn-primary me-1' data-bs-toggle='modal' data-bs-target='#edit-'>
+                        <button type='button' class='btn btn-primary me-1' data-bs-toggle='modal' data-bs-target='#edit-$dt->id'>
                         <i class='fa fa-pen-to-square'></i>
                         </button>
-                        <button type='button' class='btn btn-danger me-1' data-bs-toggle='modal' data-bs-target='#hapus-'>
+                        <button type='button' class='btn btn-danger me-1' data-bs-toggle='modal' data-bs-target='#hapus-$dt->id'>
                         <i class='fa fa-trash-can'></i>
                         </button>
                     </div>
