@@ -123,8 +123,8 @@ class LandingController extends Controller
                 $html .= "
                 <tr>
                     <td>$dt->nama</td>
-                    <td>Rp. $dt->anggaran</td>
-                    <td>Rp. $dt->realisasi</td>
+                    <td>Rp. " . number_format($dt->anggaran, 2, ',', '.') . "</td>
+                    <td>Rp. " . number_format($dt->realisasi, 2, ',', '.') . "</td>
                 </tr>
                 ";
             }
@@ -132,8 +132,8 @@ class LandingController extends Controller
             $html .= "
                     <tr>
                         <td><strong>Total</strong></td>
-                        <td><strong>Rp. " . $value['total']['anggaran'] . "</strong></td>
-                        <td colspan='2'><strong>Rp. " . $value['total']['realisasi'] . "</strong></td>
+                        <td><strong>Rp. " . number_format($value['total']['anggaran'], 2, ',', '.') . "</strong></td>
+                        <td colspan='2'><strong>Rp. " . number_format($value['total']['realisasi'], 2, ',', '.') . "</strong></td>
                     </tr>
                 </tbody>
             </table>
