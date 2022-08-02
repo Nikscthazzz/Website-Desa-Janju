@@ -20,7 +20,7 @@ class LandingController extends Controller
 
         $data = [];
         $data["mas_all"] = Masyarakat::all()->count();
-        $data["mas_lk"] = Masyarakat::where("jenis_kelamin", "LAKI-LAKI")->count();
+        $data["mas_lk"] = Masyarakat::where("jenis_kelamin", "!=", "PEREMPUAN")->count();
         $data["mas_pr"] = Masyarakat::where("jenis_kelamin", "PEREMPUAN")->count();
 
         $data["kabar_desa"] = KabarDesa::take(3)->get();
