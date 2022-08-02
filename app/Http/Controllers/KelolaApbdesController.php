@@ -122,4 +122,18 @@ class KelolaApbdesController extends Controller
 
         return back()->with("pesan", "Berhasil menambah data APBDes");
     }
+
+    public function kelolaApbdesEdit(Apbdes $apbdes, Request $request)
+    {
+        $request["user_id"] = Auth::user()->id;
+        $apbdes->update($request->all());
+
+        return back()->with("pesan", "Berhasil mengubah data APBDes");
+    }
+
+    public function kelolaApbdesDelete(Apbdes $apbdes)
+    {
+        $apbdes->delete();
+        return back()->with("pesan", "Berhasil menghapus data APBDes");
+    }
 }
