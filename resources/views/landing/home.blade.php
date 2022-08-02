@@ -89,22 +89,22 @@
         {{-- <h3 class="text-center">INFORMASI PUBLIK</h3> --}}
         <div class="row">
             <div class="col-md-4 col-sm-12 text-center mb-5">
-                <i class="fa-solid fa-file-lines text-primary mb-3" style="font-size: 4em"></i>
-                <h4 class="m-0"><strong>LAYANAN SURAT</strong></h4>
-                <p class="my-3">Layanan surat untuk memudahkan masyarakat Desa Janju dalam pembuatan surat</p>
-                <a href="#" class="btn btn-outline-primary">Lihat Halaman <i class="fa-solid fa-angle-right"></i></a>
-            </div>
-            <div class="col-md-4 col-sm-12 text-center mb-5">
                 <i class="fa-solid fa-building text-primary mb-3" style="font-size: 4em"></i>
                 <h4 class="m-0"><strong>STATISTIK DESA</strong></h4>
                 <p class="my-3">Statistik Desa untuk menampilkan informasi statistik Desa Janju</p>
-                <a href="#" class="btn btn-outline-primary">Lihat Halaman <i class="fa-solid fa-angle-right"></i></a>
+                <a href="/statistik-desa" class="btn btn-outline-primary">Lihat Halaman <i class="fa-solid fa-angle-right"></i></a>
             </div>
             <div class="col-md-4 col-sm-12 text-center mb-5">
                 <i class="fa-solid fa-money-bill-trend-up text-primary mb-3" style="font-size: 4em"></i>
                 <h4 class="m-0"><strong>APBDesa</strong></h4>
                 <p class="my-3">APBDesa untuk transparansi sumber dana dan pengeluaran pembangunan Desa Janju</p>
-                <a href="#" class="btn btn-outline-primary">Lihat Halaman <i class="fa-solid fa-angle-right"></i></a>
+                <a href="/apb-desa" class="btn btn-outline-primary">Lihat Halaman <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+            <div class="col-md-4 col-sm-12 text-center mb-5">
+                <i class="fa-solid fa-file-lines text-primary mb-3" style="font-size: 4em"></i>
+                <h4 class="m-0"><strong>LAYANAN DESA</strong></h4>
+                <p class="my-3">Layanan surat untuk memudahkan masyarakat Desa Janju dalam pembuatan surat</p>
+                <a href="/layanan-desa" class="btn btn-outline-primary">Lihat Halaman <i class="fa-solid fa-angle-right"></i></a>
             </div>
         </div>
     </div>
