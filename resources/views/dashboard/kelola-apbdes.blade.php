@@ -76,7 +76,7 @@
                 <div class="mb-5 mt-0">
                   <label class="form-label"><strong>Tahun</strong></label>
                   <select class="form-select" aria-label="Default select example" id="slc_tahun">
-                    <option selected value="">Pilih Tahun</option>
+                    <option selected value="*">Pilih Tahun</option>
                     @foreach ($tahun as $th)
                       <option>{{ $th->tahun }}</option>
                     @endforeach
