@@ -58,7 +58,8 @@ class KelolaStatistikController extends Controller
             fclose($file); //Close after reading
             $j = 0;
             foreach ($importData_arr as $importData) {
-                $data =  explode(";", $importData[0]);
+                // $data =  explode(";", $importData[0]);
+                $data =  $importData;
                 $j++;
                 try {
                     $cekExisting = Masyarakat::where("nik", $data[0])->get()->count();
