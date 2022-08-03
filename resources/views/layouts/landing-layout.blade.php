@@ -82,7 +82,7 @@
                             </ul>
                         </div>
                         <div class="col-md-4">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7995394497348!2d117.47727871453772!3d0.17580019987174023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x320a13b88782fc33%3A0x3d1268b99cbdcfe8!2sGuntung%2C%20Kec.%20Bontang%20Utara%2C%20Kota%20Bontang%2C%20Kalimantan%20Timur%2075321!5e0!3m2!1sid!2sid!4v1657797873224!5m2!1sid!2sid" width="200" height="200" style="border:0; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63803.47501687076!2d116.12601621017203!3d-1.859545365273476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df04698b5f912a5%3A0xdf1727ec7cee2708!2sJanju%2C%20Kec.%20Tanah%20Grogot%2C%20Kabupaten%20Paser%2C%20Kalimantan%20Timur!5e0!3m2!1sid!2sid!4v1659491716761!5m2!1sid!2sid" width="200" height="200" style="border:0; border-radius: 5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         
                     </div>
@@ -91,14 +91,14 @@
                 <!--end of container-->
             </section>
 
-            <footer class="footer-7 text-center-xs bg--primary  ">
+            <footer class="footer-7 text-center-xs bg--primary">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
                             <span class="type--fine-print">&copy;
                                 <span class="update-year"></span> Desa Janju Kecamatan Tanah Grogot &mdash; All Rights Reserved</span>
                         </div>
-                        <div class="col-md-6 text-right text-center-xs">
+                        {{-- <div class="col-md-6 text-right text-center-xs">
                             <ul class="social-list list-inline">
                                 <li>
                                     <a href="{{ asset('template') }}#">
@@ -121,7 +121,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                     <!--end of row-->
                 </div>
@@ -130,7 +130,7 @@
         </div>
         {{-- END MAIN CONTAINER --}}
         <!--<div class="loader"></div>-->
-        <a class="back-to-top inner-link" style="background-color: #43E762; font-size: 1.2em; text-decoration: none" target="_blank" href="https://wa.me/+6281241944616?text=%20ADAKAH%20LOVINTA" data-scroll-class="1vh:active">
+        <a class="back-to-top inner-link" style="background-color: #43E762; font-size: 1.2em; text-decoration: none" target="_blank" href="https://wa.me/+6281241944616?text=%20ADAKAH%20Admin" data-scroll-class="1vh:active">
             <i class="socicon socicon-whatsapp" style="font-size: 2em; color: white"></i>
         </a>
         <script src="{{ asset('template') }}/js/jquery-3.1.1.min.js"></script>

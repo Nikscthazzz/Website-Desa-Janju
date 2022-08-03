@@ -6,13 +6,14 @@
   </section>
 
   <section class="mt-5">
-    <div class="container">
-      <h4 class="text-center" style="font-weight: 700">Statistik Desa Janju <hr class="bg-primary m-auto" style="width:20%; height:2px"></h4>
-      <p class="text-justify">
+    <div class="container" data-aos="fade-up" data-aos-duration="500">
+      <h3 class="text-center" style="font-weight: 700">Statistik Desa Janju <hr class="bg-primary m-auto" style="width:20%; height:2px"></h3>
+      <p class="text-justify" style="font-size: 15px">
         Statistik Desa Janju merupakan hasil dari dalam melakukan pendataan secara tepat, akurat dan akuntabel berdasarkan catatan Kartu Keluarga. Diolah oleh tim pendata Desa Janju. Statistika Desa Janju meliputi beberapa kategori yakni sebagai berikut. 
       </p>
+      <br>
 
-      <div class="row">
+      <div class="row" data-aos="fade-up" data-aos-duration="500">
         <div class="col-md-4 mb-3">
           <div class="card card-1 boxed boxed--sm boxed--border bg-light">
             <div class="card-head">

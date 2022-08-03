@@ -6,11 +6,12 @@
   </section>
 
   <section class="mt-5">
-    <div class="container">
-      <h4 class="text-center" style="font-weight: 700">APBDesa Janju <hr class="bg-primary m-auto" style="width:20%; height:2px"></h4>
-      <p class="text-justify">
+    <div class="container" data-aos="fade-up" data-aos-duration="500">
+      <h3 class="text-center" style="font-weight: 700">APBDesa Janju <hr class="bg-primary m-auto" style="width:20%; height:2px"></h3>
+      <p class="text-justify" style="font-size: 15px">
         APBDesa adalah singkatan dari Anggaran Pendapatan dan Belanja Desa  merupakan peraturan desa yang memuat sumber-sumber penerimaan dan alokasi pengeluaran desa dalam kurun waktu satu tahun. APBDesa terdiri dari pendapatan desa, belanja desa dan pembiayaan. Rancangan APBDesa dibahas dalam musyawarah perencanaan pembangunan desa. 
       </p>
+      <br>
 
       <div class="dropdown mb-5 text-light" style="display: inline-block">
         <span class="dropdown__trigger bg-primary" style="padding: 8px 24px; border-radius: 24px" id="lbl_tahun">Pilih Tahun

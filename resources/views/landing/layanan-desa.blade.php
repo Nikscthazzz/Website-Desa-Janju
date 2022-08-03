@@ -6,11 +6,12 @@
   </section>
 
   <section class="mt-5">
-    <div class="container">
-      <h4 class="text-center" style="font-weight: 700">Layanan Desa Janju <hr class="bg-primary m-auto" style="width:20%; height:2px"></h4>
-      <p class="text-justify">
-        Layanan surat menyurat ini digunakan untuk membantu masyarakat Desa Janju dalam pembuatan surat secara online, sehingga dapat dilakukan dimana saja dan kapan saja tanpa harus ke Kantor Desa. Dapat langsung <a href="#">Klik Disini</a>. 
+    <div class="container" data-aos="fade-up" data-aos-duration="500">
+      <h3 class="text-center" style="font-weight: 700">Layanan Desa Janju <hr class="bg-primary m-auto" style="width:20%; height:2px"></h3>
+      <p class="text-justify" style="font-size: 15px">
+        Layanan Desa Janju digunakan untuk membantu masyarakat Desa Janju dalam mengurus administrasi secara online, sehingga dapat dilakukan dimana saja dan kapan saja tanpa harus ke Kantor Desa. 
       </p>
+      <br>
 
       <div class="row">
         @foreach ($layanan_desa as $ld)

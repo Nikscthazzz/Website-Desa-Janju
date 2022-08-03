@@ -40,8 +40,8 @@
             </div>
             <div class="col-md-6 col-lg-5">
                 <div class="switchable__text">
-                    <h2>Tentang Desa Janju</h2>
-                    <p class="lead">
+                    <h3>Tentang Desa Janju</h3>
+                    <p class="lead" style="font-size: 18px; text-align:justify">
                         Desa Janju merupakan salah satu Desa yang ada di Kecamatan Tanah Grogot Kabupaten Paser Kalimantan Timur yang terbagi menjadi 8 Rukun Tetangga (RT). Jarak tempuh dari Ibukota Kecamatan dan Ibukota Kabupaten  + 10 KM terletak pada ketinggian 0 – 15 Meter permukaan laut sedangkan jarak dari Desa Janju ke Ibu Kota Provinsi adalah 263 KM
                     </p>
                 </div>
@@ -52,7 +52,7 @@
     <!--end of container-->
   </section>
 
-  <section class="text-center imagebg" data-gradient-bg='#06283D,#1363DF,#47B5FF,#1F4690,#7FB5FF,#11468F'>
+  <section class="text-center imagebg" data-gradient-bg='#A2D2FF,#1363DF,#47B5FF,#1F4690,#7FB5FF,#11468F'>
     <div class="container" data-aos="fade-up" data-aos-duration="500">
         <div class="row">
             <div class="col-md-12 col-lg-12">
@@ -103,14 +103,14 @@
             <div class="col-md-4 col-sm-12 text-center mb-5">
                 <i class="fa-solid fa-file-lines text-primary mb-3" style="font-size: 4em"></i>
                 <h4 class="m-0"><strong>LAYANAN DESA</strong></h4>
-                <p class="my-3">Layanan surat untuk memudahkan masyarakat Desa Janju dalam pembuatan surat</p>
+                <p class="my-3">Layanan Desa untuk membantu masyarakat Desa Janju dalam mengurus administrasi secara online</p>
                 <a href="/layanan-desa" class="btn btn-outline-primary">Lihat Halaman <i class="fa-solid fa-angle-right"></i></a>
             </div>
         </div>
     </div>
   </section>
 
-  <section class="text-center imagebg" data-gradient-bg='#06283D,#1363DF,#47B5FF,#1F4690,#7FB5FF,#11468F'>
+  <section class="text-center imagebg" data-gradient-bg='#A2D2FF,#1363DF,#47B5FF,#1F4690,#7FB5FF,#11468F'>
     <div class="container" data-aos="fade-up" data-aos-duration="500">
         <div class="row">
             <div class="col-md-4 text-center text-light">
@@ -121,12 +121,12 @@
             <div class="col-md-4 text-center text-light">
                 <i class="fas fa-male" style="font-size: 7em"></i>
                 <h1 class="mb-0 mt-3 counter" style="font-weight: 700">{{ $mas_lk }}</h1>
-                <p class="m-0">Jumlah Penduduk</p>
+                <p class="m-0">Jumlah Laki-Laki</p>
             </div>
             <div class="col-md-4 text-center text-light">
                 <i class="fas fa-female" style="font-size: 7em"></i>
                 <h1 class="mb-0 mt-3 counter" style="font-weight: 700">{{ $mas_pr }}</h1>
-                <p class="m-0">Jumlah Penduduk</p>
+                <p class="m-0">Jumlah Perempuan</p>
             </div>
         </div>
         <!--end of row-->
@@ -151,7 +151,7 @@
                                 <div class="col-lg-5 col-md-6">
                                     <h3 style="font-weight:700" class="mb-0">{{ $kd->judul }}</h3>
                                     <span class="text-primary d-inline-block my-3"><i class="fas fa-calendar-alt fa-lg"></i> {{ date_format($kd->created_at,"D, d-m-Y") }}</span>
-                                    <p>{{ substr($kd->isi, 0, 200) }}..... <br><a href="/kabar-desa/{{ $kd->id }}"><span class="text-primary">Selengkapnya</span></a></p>
+                                    <p style="text-align:justify">{{ substr($kd->isi, 0, 200) }}..... <br><a href="/kabar-desa/{{ $kd->id }}"><span class="text-primary">Selengkapnya</span></a></p>
                                 </div>
                             </div>
                         </li>
