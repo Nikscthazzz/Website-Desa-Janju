@@ -4,7 +4,7 @@
 
   <section class="text-center height-100 imagebg" data-overlay="4">
       <div class="background-image-holder">
-          <img alt="background" src="{{ asset('assets') }}/img/home_hero.jpg"/>
+          <img alt="background" src="{{ asset('assets') }}/img/konten6.jpg"/>
       </div>
       <div class="container pos-vertical-center">
           <div class="row">
