@@ -33,7 +33,7 @@
     
         <style>
             .dropdown .active {
-                color: #4A90E2 !important;
+                color: #6eaaee !important;
             }
         </style>
 
@@ -68,7 +68,7 @@
                                     </tr>
                                     <tr>
                                         <td><i class="fas fa-phone text-primary"></i></td>
-                                        <td>+62 812-4194-4616</td>
+                                        <td>+62 812-5187-9326</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -130,7 +130,7 @@
         </div>
         {{-- END MAIN CONTAINER --}}
         <!--<div class="loader"></div>-->
-        <a class="back-to-top inner-link" style="background-color: #43E762; font-size: 1.2em; text-decoration: none" target="_blank" href="https://wa.me/+6281241944616?text=%20ADAKAH%20Admin" data-scroll-class="1vh:active">
+        <a class="back-to-top inner-link" style="background-color: #43E762; font-size: 1.2em; text-decoration: none" target="_blank" href="https://wa.me/+6281241944616?text=%20Halo%20Admin" data-scroll-class="1vh:active">
             <i class="socicon socicon-whatsapp" style="font-size: 2em; color: white"></i>
         </a>
         <script src="{{ asset('template') }}/js/jquery-3.1.1.min.js"></script>

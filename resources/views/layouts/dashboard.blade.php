@@ -59,19 +59,19 @@
 					<li class="sidebar-item @yield("apbdes-active")">
 						<a class="sidebar-link" href="/dashboard/kelola-apbdes">
               <i class="fas fa-money-bill align-middle"></i>
-							<span class="align-middle">Kelola APBDes</span>
+							<span class="align-middle">Kelola APBDesa</span>
             </a>
 					</li>					
 					<li class="sidebar-item @yield("layanan-active")">
 						<a class="sidebar-link" href="/dashboard/kelola-layanan">
               <i class="fas fa-receipt align-middle"></i>
-							<span class="align-middle">Kelola Layanan</span>
+							<span class="align-middle">Kelola Layanan Desa</span>
             </a>
 					</li>					
 					<li class="sidebar-item @yield("surat-kabar-active")">
 						<a class="sidebar-link" href="/dashboard/kelola-surat-kabar">
               <i class="fas fa-newspaper align-middle"></i>
-							<span class="align-middle">Kelola Surat Kabar</span>
+							<span class="align-middle">Kelola Kabar Desa</span>
             </a>
 					</li>					
 					{{-- <li class="sidebar-item @yield("beranda-active")">

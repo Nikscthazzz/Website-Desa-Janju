@@ -4,14 +4,14 @@
 
   <section class="text-center height-100 imagebg" data-overlay="4">
       <div class="background-image-holder">
-          <img alt="background" src="{{ asset('assets') }}/img/home_hero.jpg" />
+          <img alt="background" src="{{ asset('assets') }}/img/home_hero.jpg"/>
       </div>
       <div class="container pos-vertical-center">
           <div class="row">
               <div class="col-md-12">
                   <div class="typed-headline">
-                      <span class="h1 inline-block">Selamat Datang Pada</span>
-                      <span class="h1 inline-block typed-text typed-text--cursor color--primary" data-typed-strings="Website Desa Janju"></span>
+                      <span class="h1 inline-block" style="font-weight:600">Selamat Datang Pada</span>
+                      <span class="h1 inline-block typed-text typed-text--cursor color--primary" style="font-weight:600" data-typed-strings="Website Desa Janju"></span>
                   </div>
                   <p class="lead">
                       Kecamatan Tanah Grogot, Kabupaten Paser, Kalimantan Timur
@@ -40,7 +40,7 @@
             </div>
             <div class="col-md-6 col-lg-5">
                 <div class="switchable__text">
-                    <h3>Tentang Desa Janju</h3>
+                    <h3 style="font-weight:700">Tentang Desa Janju</h3>
                     <p class="lead" style="font-size: 18px; text-align:justify">
                         Desa Janju merupakan salah satu Desa yang ada di Kecamatan Tanah Grogot Kabupaten Paser Kalimantan Timur yang terbagi menjadi 8 Rukun Tetangga (RT). Jarak tempuh dari Ibukota Kecamatan dan Ibukota Kabupaten  + 10 KM terletak pada ketinggian 0 – 15 Meter permukaan laut sedangkan jarak dari Desa Janju ke Ibu Kota Provinsi adalah 263 KM
                     </p>
@@ -146,7 +146,7 @@
                                 <div class="col-md-6 col-12">
                                     {{-- <img class="testimonial__image border--round mb-3" alt="Image" src="{{ asset('storage/kabar_desa/kantor_desa.jpg') }}" /> --}}
                                     <img class="testimonial__image border--round mb-3" style="height: 300px; width: 100%; object-fit: cover" alt="Image" src="{{ asset('storage/kabar_desa/' . $kd->gambar) }}" /><br>
-                                    <a href="/kabar-desa/{{ $kd->id }}" class="btn btn-primary border-0">Lihat Halaman <i class="fas fa-angle-right"></i></a>
+                                    <a href="/kabar-desa" class="btn btn-primary border-0">Lihat Halaman <i class="fas fa-angle-right"></i></a>
                                 </div>
                                 <div class="col-lg-5 col-md-6">
                                     <h3 style="font-weight:700" class="mb-0">{{ $kd->judul }}</h3>

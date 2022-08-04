@@ -167,10 +167,10 @@ class LandingController extends Controller
             "ISLAM", "PROTESTAN", "KATOLIK", "HINDU", "BUDHA", "KONGHUCU", "LAINNYA"
         ];
         $data["pendidikan"] = [
-            "SD", "SMP", "SMA", "DIPLOMA", "SARJANA", "LAINNYA"
+            "SD/SEDERAJAT", "SLTP/SEDERAJAT", "SLTA/SEDERAJAT", "DIPLOMA", "SARJANA", "LAINNYA"
         ];
         $data["pekerjaan"] = [
-            "PENGURUS RUMAH TANGGA", "PELAJAR/MAHASISWA", "PNS/ASN", "KARYAWAN SWASTA", "PEDAGANG", "PETANI"
+            "MENGURUS RUMAH TANGGA", "PELAJAR/MAHASISWA", "PNS/ASN", "KARYAWAN SWASTA", "PEDAGANG", "PETANI"
         ];
         $data["status_pernikahan"] = [
             "BELUM KAWIN", "KAWIN", "CERAI HIDUP", "CERAI MATI"
