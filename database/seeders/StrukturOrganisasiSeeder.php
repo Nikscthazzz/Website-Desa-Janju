@@ -16,7 +16,7 @@ class StrukturOrganisasiSeeder extends Seeder
     public function run()
     {
         StrukturOrganisasi::create([
-            "gambar" => "struktur_pemerintahan.png"
+            "gambar" => "Struktur Pemerintahan Desa Janju.png"
         ]);
     }
 }
