@@ -10,7 +10,7 @@ class KelolaSuratKabarController extends Controller
 {
     public function kelolaSuratKabar()
     {
-        $kabar_desa = KabarDesa::all();
+        $kabar_desa = KabarDesa::latest()->get();
         return view("dashboard.kelola-surat-kabar", compact("kabar_desa"));
     }
     public function kelolaSuratKabarTambah(Request $request)

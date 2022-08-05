@@ -24,7 +24,7 @@ class LandingController extends Controller
         $data["mas_lk"] = Masyarakat::where("jenis_kelamin", "!=", "PEREMPUAN")->count();
         $data["mas_pr"] = Masyarakat::where("jenis_kelamin", "PEREMPUAN")->count();
 
-        $data["kabar_desa"] = KabarDesa::take(3)->get();
+        $data["kabar_desa"] = KabarDesa::take(3)->latest()->get();
 
         return view('landing.home', $data);
     }
