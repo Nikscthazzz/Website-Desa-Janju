@@ -58,8 +58,9 @@ class KelolaStatistikController extends Controller
             fclose($file); //Close after reading
             $j = 0;
             foreach ($importData_arr as $importData) {
-                $data =  explode(",", $importData[0]);
-                $data =  $importData;
+                $data =  explode(";", $importData[0]);
+                // $data =  $importData;
+                // dd($data);
                 $j++;
                 try {
                     $cekExisting = Masyarakat::where("nik", $data[0])->get()->count();
@@ -67,16 +68,29 @@ class KelolaStatistikController extends Controller
                         $j--;
                         continue;
                     }
+
+                    for ($i = 0; $i < count($data); $i++) {
+                        $length_dt = strlen($data[$i]) - 1;
+                        if ($data[$i][0] == " " && $data[$i][$length_dt] == " ") {
+                            $dataTemp = ltrim(strtoupper($data[$i]), strtoupper($data[$i])[0]);
+                            $data[$i] = substr($dataTemp, 0, -1);
+                        }
+                        if ($data[$i][0] == "\"" && $data[$i][$length_dt] == "\"") {
+                            $dataTemp = ltrim(strtoupper($data[$i]), strtoupper($data[$i])[0]);
+                            $data[$i] = substr($dataTemp, 0, -1);
+                        }
+                    }
+
                     Masyarakat::create([
                         "user_id" => Auth::user()->id,
                         'nik' => $data[0],
-                        'nama_lengkap' => strtoupper($data[1]),
-                        'jenis_kelamin' => strtoupper($data[2]),
-                        'agama' => strtoupper($data[3]),
-                        'pendidikan' => strtoupper($data[4]),
-                        'pekerjaan' => strtoupper($data[5]),
-                        'status_pernikahan' => strtoupper($data[6]),
-                        'kewarganegaraan' => strtoupper($data[7])
+                        'nama_lengkap' => $data[1],
+                        'jenis_kelamin' => $data[2],
+                        'agama' => $data[3],
+                        'pendidikan' => $data[4],
+                        'pekerjaan' => $data[5],
+                        'status_pernikahan' => $data[6],
+                        'kewarganegaraan' => $data[7]
                     ]);
                 } catch (\Exception $e) {
                     throw $e;
@@ -95,6 +109,7 @@ class KelolaStatistikController extends Controller
         $fileName = "masyarakat_desa_janju_$tanggal.csv";
         $masyarakat = Masyarakat::all();
 
+        // return $masyarakat;
         $headers = array(
             "Content-type"        => "text/csv",
             "Content-Disposition" => "attachment; filename=$fileName",
@@ -107,7 +122,7 @@ class KelolaStatistikController extends Controller
 
         $callback = function () use ($masyarakat, $columns) {
             $file = fopen('php://output', 'w');
-            fputcsv($file, $columns);
+            fputcsv($file, $columns, ";");
 
             foreach ($masyarakat as $msy) {
                 $row['NIK']  = $msy->nik;
@@ -119,7 +134,7 @@ class KelolaStatistikController extends Controller
                 $row['Status Pernikahan']  = $msy->status_pernikahan;
                 $row['Kewarganegaraan']  = $msy->kewarganegaraan;
 
-                fputcsv($file, array($row['NIK'], $row['Nama Lengkap'], $row['Jenis Kelamin'], $row['Agama'], $row['Pendidikan'], $row['Pekerjaan'], $row['Status Pernikahan'], $row['Kewarganegaraan']));
+                fputcsv($file, array($row['NIK'], $row['Nama Lengkap'], $row['Jenis Kelamin'], $row['Agama'], $row['Pendidikan'], $row['Pekerjaan'], $row['Status Pernikahan'], $row['Kewarganegaraan']), ";");
             }
 
             fclose($file);
