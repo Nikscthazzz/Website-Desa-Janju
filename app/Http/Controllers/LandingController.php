@@ -148,7 +148,7 @@ class LandingController extends Controller
     }
     public function kabarDesa()
     {
-        $kabar_desa = KabarDesa::all();
+        $kabar_desa = KabarDesa::latest()->get();
         return view("landing.kabar-desa", compact("kabar_desa"));
     }
     public function kabarDesaDetail(KabarDesa $kabar_desa)
