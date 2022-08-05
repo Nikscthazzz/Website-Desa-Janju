@@ -162,13 +162,13 @@ class KelolaStatistikController extends Controller
             "LAKI-LAKI", "PEREMPUAN"
         ];
         $data["agama"] = [
-            "ISLAM", "PROTESTAN", "KATOLIK", "HINDU", "BUDHA", "KONGHUCU", "LAINNYA"
+            "ISLAM", "KRISTEN", "HINDU", "BUDHA", "KONGHUCU"
         ];
         $data["pendidikan"] = [
-            "SD/SEDERAJAT", "SLTP/SEDERAJAT", "SLTA/SEDERAJAT", "TIDAK/BELUM SEKOLAH", "SARJANA", "LAINNYA"
+            "TIDAK/BELUM SEKOLAH", "SD/SEDERAJAT", "SLTP/SEDERAJAT", "SLTA/SEDERAJAT", "AKADEMI/DIPLOMA III/S. MUDA", "DIPLOMA IV/STRATA I", "LAINNYA"
         ];
         $data["pekerjaan"] = [
-            "MENGURUS RUMAH TANGGA", "PELAJAR/MAHASISWA", "PNS/ASN", "KARYAWAN SWASTA", "PEDAGANG", "PETANI"
+            "BELUM/TIDAK BEKERJA", "PELAJAR/MAHASISWA", "MENGURUS RUMAH TANGGA", "PEGAWAI NEGERI SIPIL", "KARYAWAN SWASTA", "KARYAWAN HONORER", "WIRASWASTA", "LAINNYA"
         ];
         $data["status_pernikahan"] = [
             "BELUM KAWIN", "KAWIN", "CERAI HIDUP", "CERAI MATI"
