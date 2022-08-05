@@ -150,7 +150,7 @@ class KelolaStatistikController extends Controller
             "ISLAM", "PROTESTAN", "KATOLIK", "HINDU", "BUDHA", "KONGHUCU", "LAINNYA"
         ];
         $data["pendidikan"] = [
-            "SD/SEDERAJAT", "SLTP/SEDERAJAT", "SLTA/SEDERAJAT", "DIPLOMA", "SARJANA", "LAINNYA"
+            "SD/SEDERAJAT", "SLTP/SEDERAJAT", "SLTA/SEDERAJAT", "TIDAK/BELUM SEKOLAH", "SARJANA", "LAINNYA"
         ];
         $data["pekerjaan"] = [
             "MENGURUS RUMAH TANGGA", "PELAJAR/MAHASISWA", "PNS/ASN", "KARYAWAN SWASTA", "PEDAGANG", "PETANI"
