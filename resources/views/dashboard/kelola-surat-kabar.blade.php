@@ -70,7 +70,7 @@
                     @foreach ($kabar_desa as $kd)
                     <tr>
                       <td>{{ $loop->iteration }}</td>
-                      <td>{{ date_format($kd->created_at,"D, d-m-Y"); }}</td>
+                      <td>{{ $kd->created_at->isoFormat('dddd, D MMMM Y') }}</td>
                       <td>{{ $kd->judul }}</td>
                       <td>{{ $kd->isi }}</td>
                       <td><img src="{{ asset('storage/kabar_desa/' . $kd->gambar) }}" alt="gambar" width="100" class="img"></td>

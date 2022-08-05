@@ -12,7 +12,7 @@
                 <article>
                     <div class="article__title text-center">
                         <h1 class="h2">{{ $kabar_desa->judul }}</h1>
-                        <span>{{ date_format($kabar_desa->created_at,"D, d-m-Y") }}</span>
+                        <span>{{ $kd->created_at->isoFormat('dddd, D MMMM Y') }}</span>
                     </div>
                     <!--end article title-->
                     <div class="article__body">

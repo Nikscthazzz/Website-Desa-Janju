@@ -150,7 +150,7 @@
                                 </div>
                                 <div class="col-lg-5 col-md-6">
                                     <h3 style="font-weight:700" class="mb-0">{{ $kd->judul }}</h3>
-                                    <span class="text-primary d-inline-block my-3"><i class="fas fa-calendar-alt fa-lg"></i> {{ date_format($kd->created_at,"D, d-m-Y") }}</span>
+                                    <span class="text-primary d-inline-block my-3"><i class="fas fa-calendar-alt fa-lg"></i> {{ $kd->created_at->isoFormat('dddd, D MMMM Y') }}</span>
                                     <p style="text-align:justify">{{ substr($kd->isi, 0, 200) }}..... <br><a href="/kabar-desa/{{ $kd->id }}"><span class="text-primary">Selengkapnya</span></a></p>
                                 </div>
                             </div>
