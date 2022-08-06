@@ -23,12 +23,12 @@ class KabarDesaSeeder extends Seeder
         KabarDesa::create([
             "judul" => "Pelatihan Kewirausahaan Budidaya Lebah Kelulut 'Yang Muda Bekarya'",
             "isi" => "Salah satu Kelompok Usaha Perhutanan Sosial (KUPS) di Desa Datai Nirui, Kecamatan Teweh Tengah, Kabupaten Barito Utara, Kalimantan Tengah, melakukan budidaya lebah kelulut. Ketua Kelompok KUPS Madu Kelulut Sinardi mengatakan budidaya lebah tersebut baru dimulai sejak 3 bulan lalu. Pada Kamis, 11 November 2021, baru ada 113 sarang lebah dalam dalam tahap percobaan itu. Sinardi memperkirakan madu kelulut tersebut bisa dipanen pada akhir bulan November. Jumlahnya ditaksir hingga 10 liter madu. Selain itu, Sinardi berharap pemerintah bisa meningkatkan bantuan pada KUPS. Tujuannya, agar produksi madu kelulut bisa terus ditingkatkan.",
-            "gambar" => "kabardesa2.jpeg"
+            "gambar" => "kabardesa2.jpg"
         ]);
         KabarDesa::create([
             "judul" => "Keindahan Objek Wisata 'Kampung Warna Warni'",
             "isi" => "Sudut-sudut kampung dihiasi dengan berbagai warna yang elok dipandang. Warna cerah dan terang sangat memikat perhatian setiap pengunjung. Spot-spot menarik yang instagramable bisa kamu temukan saat berkunjung ke Kampung Warna Warni Jodipan. Kamu bisa mengabadikan momen selama di kampung wisata ini dengan bidikan kamera. Berkunjung bersama keluarga ke Kampung Warna Warni Jodipan sangat cocok. Bersama pasangan agar semakin romantis juga menjadi opsi untuk kamu. Inspirasi baru bisa kamu dapatkan saat berkunjung ke Kampung Jodipan. Kemudian inspirasi tersebut kamu realisasikan di rumah atau di kampung halaman.",
-            "gambar" => "kabardesa3.jpeg"
+            "gambar" => "kabardesa3.jpg"
         ]);
     }
 }
