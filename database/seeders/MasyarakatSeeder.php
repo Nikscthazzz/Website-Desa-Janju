@@ -18,10 +18,10 @@ class MasyarakatSeeder extends Seeder
         Masyarakat::create([
             "user_id" => 1,
             "nik" => "38103219312381029",
-            "nama_lengkap" => "sallie mansurina",
-            "jenis_kelamin" => "LAKI-LAKI",
+            "nama_lengkap" => "NIKITA SAMANTHA",
+            "jenis_kelamin" => "PEREMPUAN",
             "agama" => "ISLAM",
-            "pendidikan" => "SARJANA",
+            "pendidikan" => "DIPLOMA IV/STRATA I",
             "status_pernikahan" => "BELUM KAWIN",
             "kewarganegaraan" => "WNI",
             "pekerjaan" => "FREELANCE"
