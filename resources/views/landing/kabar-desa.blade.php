@@ -26,7 +26,7 @@
                         </a>
                         <div class="feature__body boxed boxed--border">
                             <span>{{ $kd->created_at->isoFormat('dddd, D MMMM Y') }}</span>
-                            <h3 class="text-left" style="font-size: 18px">{{ $kd->judul }}</h3>
+                            <h3 class="text-left" style="font-size: 18px">{{ substr($kd->judul, 0, 65) }}</h3>
                             <p style="text-align:justify">{{ substr($kd->isi, 0, 200) }}..... </p>
                             <a href="/kabar-desa/{{ $kd->id }}">
                                 Lihat selengkapnya

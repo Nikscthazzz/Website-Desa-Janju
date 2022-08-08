@@ -16,7 +16,9 @@
                     </div>
                     <!--end article title-->
                     <div class="article__body">
-                        <img alt="Image" src="{{ asset('storage/kabar_desa/' . $kabar_desa->gambar) }}" />
+                        <div class="text-center">
+                            <img alt="Image" src="{{ asset('storage/kabar_desa/' . $kabar_desa->gambar) }}" />
+                        </div>
                         <br>
                         <br>
                         <p style="font-size: 17px; text-align:justify">{{ $kabar_desa->isi }}</p>
