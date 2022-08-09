@@ -130,7 +130,7 @@
         </div>
         {{-- END MAIN CONTAINER --}}
         <!--<div class="loader"></div>-->
-        <a class="back-to-top inner-link" style="background-color: #43E762; font-size: 1.2em; text-decoration: none" target="_blank" href="https://wa.me/+6281241944616?text=%20Halo%20Admin" data-scroll-class="1vh:active">
+        <a class="back-to-top inner-link" style="background-color: #43E762; font-size: 1.2em; text-decoration: none" target="_blank" href="https://wa.me/+6281241944616?text=%20Halo%20Admin,%20Saya%20ingin%20bertanya" data-scroll-class="1vh:active">
             <i class="socicon socicon-whatsapp" style="font-size: 2em; color: white"></i>
         </a>
         <script src="{{ asset('template') }}/js/jquery-3.1.1.min.js"></script>
